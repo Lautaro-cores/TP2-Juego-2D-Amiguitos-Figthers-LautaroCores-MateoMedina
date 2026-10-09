@@ -2,12 +2,6 @@
   "version": 4,
   "targets": {
     "net9.0": {
-      "MonoGame.Content.Builder.Task/3.8.6": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
-        }
-      },
       "MonoGame.Framework.DesktopGL/3.8.6": {
         "type": "package",
         "dependencies": {
@@ -141,38 +135,10 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
-      },
-      "Amiguitos Fighthers/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "MonoGame.Content.Builder.Task": "3.8.0",
-          "MonoGame.Framework.DesktopGL": "3.8.0"
-        },
-        "compile": {
-          "bin/placeholder/Amiguitos Fighthers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Amiguitos Fighthers.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "MonoGame.Content.Builder.Task/3.8.6": {
-      "sha512": "YzlwPtEGn5wlxToias3I/dW7ZyRJZLr2uMYKgrkwm/gpYyxWg4eI9f5+ih2CdLoCm5Daqvpf8w5PvwwzGsR1Og==",
-      "type": "package",
-      "path": "monogame.content.builder.task/3.8.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/MonoGame.Content.Builder.Task.props",
-        "build/MonoGame.Content.Builder.Task.targets",
-        "monogame.content.builder.task.3.8.6.nupkg.sha512",
-        "monogame.content.builder.task.nuspec"
-      ]
-    },
     "MonoGame.Framework.DesktopGL/3.8.6": {
       "sha512": "pVAwFo+wNCco7881v8VAkPcls/jYVyfzxx/eSBMuT45ZqZcTFqptsZxd8KwBEE5PQc5UxbX5erGh0rwtFGsKVg==",
       "type": "package",
@@ -314,16 +280,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Amiguitos Fighthers/1.0.0": {
-      "type": "project",
-      "path": "../Amiguitos Fighthers/Amiguitos Fighthers.csproj",
-      "msbuildProject": "../Amiguitos Fighthers/Amiguitos Fighthers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Amiguitos Fighthers >= 1.0.0",
       "MonoGame.Framework.DesktopGL >= 3.8.*"
     ]
   },
@@ -354,11 +314,7 @@
         "net9.0": {
           "framework": "net9.0",
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "C:\\Users\\alumno.ET26\\Documents\\GitHub\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj": {
-              "projectPath": "C:\\Users\\alumno.ET26\\Documents\\GitHub\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

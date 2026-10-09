@@ -7,7 +7,4 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Amiguitos Fighthers\Amiguitos Fighthers.csproj" />
-  </ItemGroup>
 </Project>

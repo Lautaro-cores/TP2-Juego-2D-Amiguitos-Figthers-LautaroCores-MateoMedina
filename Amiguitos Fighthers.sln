@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amiguitos Fighthers", "Amiguitos Fighthers\Amiguitos Fighthers.csproj", "{9DA359F2-2D31-4AD2-A66C-852CAEF76B3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "MonoGameLibrary\MonoGameLibrary.csproj", "{7158C1D9-DF93-442B-915D-1EED98FB3DAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{9DA359F2-2D31-4AD2-A66C-852CAEF76B3E}.Release|x64.Build.0 = Release|Any CPU
 		{9DA359F2-2D31-4AD2-A66C-852CAEF76B3E}.Release|x86.ActiveCfg = Release|Any CPU
 		{9DA359F2-2D31-4AD2-A66C-852CAEF76B3E}.Release|x86.Build.0 = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|x64.Build.0 = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Debug|x86.Build.0 = Debug|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|x64.ActiveCfg = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|x64.Build.0 = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|x86.ActiveCfg = Release|Any CPU
+		{7158C1D9-DF93-442B-915D-1EED98FB3DAF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

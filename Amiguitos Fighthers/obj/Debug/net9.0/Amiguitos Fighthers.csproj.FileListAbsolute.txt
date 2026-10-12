@@ -36,3 +36,48 @@ C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCor
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.pdb
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\atlaspj.xml
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas-definition.xml
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas.xnb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.deps.json
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.runtimeconfig.json
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.pdb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\MonoGame.Framework.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\NVorbis.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\android-arm\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\android-arm64\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\android-x64\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\android-x86\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\ios-arm64\native\libopenal.a
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\iossimulator-arm64\native\libopenal.a
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\iossimulator-x64\native\libopenal.a
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\linux-arm64\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\linux-x64\native\libopenal.so
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\osx\native\libopenal.dylib
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\win-arm64\native\openal.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\win-x64\native\openal.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\linux-arm64\native\libSDL2-2.0.so.0
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\win-arm64\native\SDL2.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\MonoGameLibrary.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\MonoGameLibrary.pdb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\mgcb.tool.restore
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.csproj.AssemblyReference.cache
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.AssemblyInfoInputs.cache
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.AssemblyInfo.cs
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.csproj.CoreCompileInputs.cache
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.sourcelink.json
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguito.21C7B6F5.Up2Date
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\refint\Amiguitos Fighthers.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.pdb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll

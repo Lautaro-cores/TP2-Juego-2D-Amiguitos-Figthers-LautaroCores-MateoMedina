@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Amiguitos Fighthers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a0dd32f67f94ce564eb447fa06be3b487ba3db8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f476209aa425d8114eeb37cb68778f14555459f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Amiguitos Fighthers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Amiguitos Fighthers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

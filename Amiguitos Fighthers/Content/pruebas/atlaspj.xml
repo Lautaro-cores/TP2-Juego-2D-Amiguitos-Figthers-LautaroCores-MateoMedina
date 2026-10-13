@@ -15,11 +15,11 @@
             <Frame region="Pose2" />
             <Frame region="Pose1" />
         </Animation>
-        <Animation name="Pose1-animacion" delay="150">
+        <Animation name="Pose1-animacion" delay="100">
             <Frame region="Pose4" />
             <Frame region="Pose5" />
+            <Frame region="Pose1" />
             <Frame region="Pose4" />
-            <Frame region="Pose5" />
         </Animation>
     </Animations>
 </TextureAtlas>

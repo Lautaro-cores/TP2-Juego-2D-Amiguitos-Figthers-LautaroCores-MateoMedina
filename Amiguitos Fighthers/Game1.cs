@@ -11,12 +11,15 @@ namespace Amiguitos_Fighthers;
 
 public class Game1 : Core
 {
-    private AnimatedSprite _slime;
-    private AnimatedSprite _bat;    
-    private AnimatedSprite Pose1;
-    private AnimatedSprite Pose2;
 
-    private Vector2 positionPose;
+    private AnimatedSprite Pose1;
+    private AnimatedSprite PJ1;
+
+    private AnimatedSprite PJ2;
+
+    private Vector2 positionP1;
+
+    private Vector2 positionP2;
 
     private const float Velocidad = 5.0f;
 
@@ -34,38 +37,30 @@ public class Game1 : Core
 
     protected override void LoadContent()
     {
-        TextureAtlas atlas = TextureAtlas.FromFile(Content, "pruebas/atlas-definition.xml");
 
         TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
 
-            // Create the slime animated sprite from the atlas.
-        _slime = atlas.CreateAnimatedSprite("slime-animation");
-        _slime.Scale = new Vector2(4.0f, 4.0f);
-
-        // Create the bat animated sprite from the atlas.
-        _bat = atlas.CreateAnimatedSprite("bat-animation");
-        _bat.Scale = new Vector2(4.0f, 4.0f);
 
         Pose1 = atlaspj.CreateAnimatedSprite ("Pose-animacion");
         Pose1.Scale = new Vector2(3.0f, 3.0f);
 
-        Pose2 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
-        Pose2.Scale = new Vector2(3.0f, 3.0f);
+        PJ1 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
+        PJ1.Scale = new Vector2(3.0f, 3.0f);
+
+        PJ2 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
+        PJ2.Scale = new Vector2(3.0f, 3.0f);
+        PJ2.Effects = SpriteEffects.FlipHorizontally;
     }
 
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-             // Update the slime animated sprite.
-        _slime.Update(gameTime);
-
-        // Update the bat animated sprite.
-        _bat.Update(gameTime);
 
         Pose1.Update(gameTime);
 
-        Pose2.Update(gameTime);
+        PJ1.Update(gameTime);
+        PJ2.Update(gameTime);
         // TODO: Add your update logic here
 
         base.Update(gameTime);
@@ -76,33 +71,53 @@ public class Game1 : Core
     {
         // If the space key is held down, the movement speed increases by 1.5
         float speed = Velocidad;
-        if (Input.Keyboard.IsKeyDown(Keys.Space))
-        {
-            speed *= 1.5f;
-        }
 
         // If the W or Up keys are down, move the slime up on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.W) || Input.Keyboard.IsKeyDown(Keys.Up))
+        if (Input.Keyboard.IsKeyDown(Keys.W))
         {
-            positionPose.Y -= speed;
+            positionP1.Y -= speed;
         }
 
         // if the S or Down keys are down, move the slime down on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.S) || Input.Keyboard.IsKeyDown(Keys.Down))
+        if (Input.Keyboard.IsKeyDown(Keys.S))
         {
-            positionPose.Y += speed;
+            positionP1.Y += speed;
         }
 
         // If the A or Left keys are down, move the slime left on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.A) || Input.Keyboard.IsKeyDown(Keys.Left))
+        if (Input.Keyboard.IsKeyDown(Keys.A))
         {
-            positionPose.X -= speed;
+            positionP1.X -= speed;
         }
 
         // If the D or Right keys are down, move the slime right on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.D) || Input.Keyboard.IsKeyDown(Keys.Right))
+        if (Input.Keyboard.IsKeyDown(Keys.D))
         {
-            positionPose.X += speed;
+            positionP1.X += speed;
+        }
+
+        // If the W or Up keys are down, move the slime up on the screen.
+        if (Input.Keyboard.IsKeyDown(Keys.Up))
+        {
+            positionP2.Y -= speed;
+        }
+
+        // if the S or Down keys are down, move the slime down on the screen.
+        if (Input.Keyboard.IsKeyDown(Keys.Down))
+        {
+            positionP2.Y += speed;
+        }
+
+        // If the A or Left keys are down, move the slime left on the screen.
+        if (Input.Keyboard.IsKeyDown(Keys.Left))
+        {
+            positionP2.X -= speed;
+        }
+
+        // If the D or Right keys are down, move the slime right on the screen.
+        if (Input.Keyboard.IsKeyDown(Keys.Right))
+        {
+            positionP2.X += speed;
         }
     }
     protected override void Draw(GameTime gameTime)
@@ -117,8 +132,9 @@ public class Game1 : Core
     //    _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
         
         Pose1.Draw(SpriteBatch, Vector2.Zero);
-
-        Pose2.Draw(SpriteBatch, positionPose);
+        
+        PJ1.Draw(SpriteBatch, positionP1);
+        PJ2.Draw(SpriteBatch, positionP2);
         // Always end the sprite batch when finished.
         SpriteBatch.End();
         // TODO: Add your drawing code here

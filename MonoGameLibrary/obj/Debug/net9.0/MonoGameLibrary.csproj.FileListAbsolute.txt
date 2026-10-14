@@ -24,3 +24,16 @@ C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mate
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\refint\MonoGameLibrary.dll
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.pdb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\ref\MonoGameLibrary.dll
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\Debug\net9.0\MonoGameLibrary.deps.json
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\Debug\net9.0\MonoGameLibrary.dll
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\Debug\net9.0\MonoGameLibrary.pdb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.csproj.AssemblyReference.cache
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.AssemblyInfoInputs.cache
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.AssemblyInfo.cs
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.sourcelink.json
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.dll
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\refint\MonoGameLibrary.dll
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\MonoGameLibrary.pdb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\obj\Debug\net9.0\ref\MonoGameLibrary.dll

@@ -20,6 +20,8 @@ public class Game1 : Core
 
     private CollisionBody collisionP2;
 
+    //para la verificacion de la tecla
+    private bool _wasJDown;
     private const float Velocidad = 5.0f;
 
     public Game1() : base("Amiguitos Fighthers", 1280, 720, false)
@@ -39,8 +41,9 @@ public class Game1 : Core
 
         TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
 
-
+        //animacion piña
         Pose1 = atlaspj.CreateAnimatedSprite ("Pose-animacion");
+        Pose1.Stop();
         Pose1.Scale = new Vector2(3.0f, 3.0f);
 
         PJ1 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
@@ -59,14 +62,26 @@ public class Game1 : Core
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        Pose1.Update(gameTime);
 
-        PJ1.Update(gameTime);
+        // Check for keyboard input and handle it.
+        
+        if (Pose1.IsPlaying)
+        {
+            Pose1.Update(gameTime);
+        }
+        else
+        {
+            PJ1.Update(gameTime);
+        }
+
+        
+
+        
         PJ2.Update(gameTime);
         // TODO: Add your update logic here
 
         base.Update(gameTime);
-        CheckKeyboardInput();   
+        CheckKeyboardInput();
     }
 
   private void CheckKeyboardInput()
@@ -84,6 +99,16 @@ public class Game1 : Core
         if (Input.Keyboard.IsKeyDown(Keys.Left)) movementP2.X -= Velocidad;
         if (Input.Keyboard.IsKeyDown(Keys.Right)) movementP2.X += Velocidad;
 
+
+        //aca verifico que la tecla este apretada y arranco la animacion sin el loop
+        bool isJDown = Input.Keyboard.IsKeyDown(Keys.J);
+        if (isJDown && !_wasJDown && !Pose1.IsPlaying)
+        {
+            Pose1.Play(loop: false);
+        }
+
+        _wasJDown = isJDown;
+
         collisionP1.Move(movementP1, collisionP2);
         collisionP2.Move(movementP2, collisionP1);
     }
@@ -99,9 +124,14 @@ public class Game1 : Core
         // Draw the bat sprite 10px to the right of the slime.
     //    _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
         
-        Pose1.Draw(SpriteBatch, Vector2.Zero);
         
-        PJ1.Draw(SpriteBatch, collisionP1.Position);
+        AnimatedSprite sprite = Pose1.IsPlaying
+            ? Pose1
+            : PJ1;
+        sprite.Draw(SpriteBatch, collisionP1.Position);
+
+        
+       
         PJ2.Draw(SpriteBatch, collisionP2.Position);
         // Always end the sprite batch when finished.
         SpriteBatch.End();

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary;
 using MonoGameLibrary.Graphics;
 using MonoGameLibrary.Input;
+using MonoGameLibrary.Physics;
 
 namespace Amiguitos_Fighthers;
 
@@ -17,9 +16,9 @@ public class Game1 : Core
 
     private AnimatedSprite PJ2;
 
-    private Vector2 positionP1;
+    private CollisionBody collisionP1;
 
-    private Vector2 positionP2;
+    private CollisionBody collisionP2;
 
     private const float Velocidad = 5.0f;
 
@@ -50,6 +49,9 @@ public class Game1 : Core
         PJ2 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
         PJ2.Scale = new Vector2(3.0f, 3.0f);
         PJ2.Effects = SpriteEffects.FlipHorizontally;
+
+        collisionP1 = new CollisionBody(PJ1, new Vector2(200.0f, 300.0f));
+        collisionP2 = new CollisionBody(PJ2, new Vector2(900.0f, 300.0f));
     }
 
     protected override void Update(GameTime gameTime)
@@ -69,57 +71,23 @@ public class Game1 : Core
 
   private void CheckKeyboardInput()
     {
-        // If the space key is held down, the movement speed increases by 1.5
-        float speed = Velocidad;
+        Vector2 movementP1 = Vector2.Zero;
+        Vector2 movementP2 = Vector2.Zero;
 
-        // If the W or Up keys are down, move the slime up on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.W))
-        {
-            positionP1.Y -= speed;
-        }
+        if (Input.Keyboard.IsKeyDown(Keys.W)) movementP1.Y -= Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.S)) movementP1.Y += Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.A)) movementP1.X -= Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.D)) movementP1.X += Velocidad;
 
-        // if the S or Down keys are down, move the slime down on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.S))
-        {
-            positionP1.Y += speed;
-        }
+        if (Input.Keyboard.IsKeyDown(Keys.Up)) movementP2.Y -= Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.Down)) movementP2.Y += Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.Left)) movementP2.X -= Velocidad;
+        if (Input.Keyboard.IsKeyDown(Keys.Right)) movementP2.X += Velocidad;
 
-        // If the A or Left keys are down, move the slime left on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.A))
-        {
-            positionP1.X -= speed;
-        }
-
-        // If the D or Right keys are down, move the slime right on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.D))
-        {
-            positionP1.X += speed;
-        }
-
-        // If the W or Up keys are down, move the slime up on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.Up))
-        {
-            positionP2.Y -= speed;
-        }
-
-        // if the S or Down keys are down, move the slime down on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.Down))
-        {
-            positionP2.Y += speed;
-        }
-
-        // If the A or Left keys are down, move the slime left on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.Left))
-        {
-            positionP2.X -= speed;
-        }
-
-        // If the D or Right keys are down, move the slime right on the screen.
-        if (Input.Keyboard.IsKeyDown(Keys.Right))
-        {
-            positionP2.X += speed;
-        }
+        collisionP1.Move(movementP1, collisionP2);
+        collisionP2.Move(movementP2, collisionP1);
     }
+
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -133,8 +101,8 @@ public class Game1 : Core
         
         Pose1.Draw(SpriteBatch, Vector2.Zero);
         
-        PJ1.Draw(SpriteBatch, positionP1);
-        PJ2.Draw(SpriteBatch, positionP2);
+        PJ1.Draw(SpriteBatch, collisionP1.Position);
+        PJ2.Draw(SpriteBatch, collisionP2.Position);
         // Always end the sprite batch when finished.
         SpriteBatch.End();
         // TODO: Add your drawing code here

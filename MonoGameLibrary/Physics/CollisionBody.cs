@@ -70,4 +70,16 @@ public sealed class CollisionBody
 
         return new Point(width, height);
     }
+
+    public void KeepInside(Rectangle screenBounds)
+{
+    float maxX = Math.Max(screenBounds.Left, screenBounds.Right - _size.X);
+    float maxY = Math.Max(screenBounds.Top, screenBounds.Bottom - _size.Y);
+
+    Position = new Vector2(
+        Math.Clamp(Position.X, screenBounds.Left, maxX),
+        Math.Clamp(Position.Y, screenBounds.Top, maxY)
+    );
+}
+
 }

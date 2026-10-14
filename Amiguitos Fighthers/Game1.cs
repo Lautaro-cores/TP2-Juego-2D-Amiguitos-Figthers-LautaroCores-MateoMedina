@@ -42,14 +42,14 @@ public class Game1 : Core
         TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
 
         //animacion piña
-        Pose1 = atlaspj.CreateAnimatedSprite ("Pose-animacion");
+        Pose1 = atlaspj.CreateAnimatedSprite("Pose-animacion");
         Pose1.Stop();
         Pose1.Scale = new Vector2(3.0f, 3.0f);
 
-        PJ1 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
+        PJ1 = atlaspj.CreateAnimatedSprite("Pose1-animacion");
         PJ1.Scale = new Vector2(3.0f, 3.0f);
 
-        PJ2 = atlaspj.CreateAnimatedSprite ("Pose1-animacion");
+        PJ2 = atlaspj.CreateAnimatedSprite("Pose1-animacion");
         PJ2.Scale = new Vector2(3.0f, 3.0f);
         PJ2.Effects = SpriteEffects.FlipHorizontally;
 
@@ -64,7 +64,7 @@ public class Game1 : Core
 
 
         // Check for keyboard input and handle it.
-        
+
         if (Pose1.IsPlaying)
         {
             Pose1.Update(gameTime);
@@ -74,17 +74,28 @@ public class Game1 : Core
             PJ1.Update(gameTime);
         }
 
-        
 
-        
+
+
         PJ2.Update(gameTime);
         // TODO: Add your update logic here
 
         base.Update(gameTime);
         CheckKeyboardInput();
+
+        Rectangle screenBounds = new Rectangle(
+    0,
+    0,
+    GraphicsDevice.PresentationParameters.BackBufferWidth,
+    GraphicsDevice.PresentationParameters.BackBufferHeight
+);
+
+        collisionP1.KeepInside(screenBounds);
+        collisionP2.KeepInside(screenBounds);
+
     }
 
-  private void CheckKeyboardInput()
+    private void CheckKeyboardInput()
     {
         Vector2 movementP1 = Vector2.Zero;
         Vector2 movementP2 = Vector2.Zero;
@@ -116,22 +127,22 @@ public class Game1 : Core
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-            SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
         // Draw the slime texture region at a scale of 4.0
-     //  _slime.Draw(SpriteBatch, Vector2.Zero);
+        //  _slime.Draw(SpriteBatch, Vector2.Zero);
 
         // Draw the bat sprite 10px to the right of the slime.
-    //    _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
-        
-        
+        //    _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
+
+
         AnimatedSprite sprite = Pose1.IsPlaying
             ? Pose1
             : PJ1;
         sprite.Draw(SpriteBatch, collisionP1.Position);
 
-        
-       
+
+
         PJ2.Draw(SpriteBatch, collisionP2.Position);
         // Always end the sprite batch when finished.
         SpriteBatch.End();

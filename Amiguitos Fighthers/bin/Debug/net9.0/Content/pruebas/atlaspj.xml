@@ -2,11 +2,12 @@
 <TextureAtlas>
     <Texture>pruebas/AtlasPjEjemplo</Texture>
     <Regions>
-        <Region name="Pose1" x="0" y="0" width="64" height="80" />
-        <Region name="Pose2" x="65" y="0" width="60" height="80" />
-        <Region name="Pose3" x="126" y="0" width="65" height="80" />
-        <Region name="Pose4" x="192" y="0" width="65" height="80" />
-        <Region name="Pose5" x="260" y="0" width="65" height="80" />
+        <Region name="Pose1" x="0" y="0" width="60" height="73" />
+        <Region name="Pose2" x="61" y="0" width="55" height="73" />
+        <Region name="Pose3" x="116" y="0" width="67" height="73" />
+        <Region name="Pose4" x="185" y="0" width="60" height="73" />
+        <Region name="Pose5" x="244" y="0" width="50" height="73" />
+        <Region name="Pose6" x="294" y="0" width="49" height="73" />
     </Regions>
     <Animations>
         <Animation name="Pose-animacion" delay="150">
@@ -18,7 +19,7 @@
         <Animation name="Pose1-animacion" delay="100">
             <Frame region="Pose4" />
             <Frame region="Pose5" />
-            <Frame region="Pose1" />
+            <Frame region="Pose6" />
             <Frame region="Pose4" />
         </Animation>
     </Animations>

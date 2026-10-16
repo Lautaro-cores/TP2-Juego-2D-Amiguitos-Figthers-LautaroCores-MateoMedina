@@ -4,9 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/atlas.png</File>
-    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
-    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
+    <File>C:/Users/alumno.ET26/Documents/GitHub/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/atlas.png</File>
+    <File>C:/Users/alumno.ET26/Documents/GitHub/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
+    <File>C:/Users/alumno.ET26/Documents/GitHub/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

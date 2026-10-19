@@ -41,9 +41,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pruebas/AtlasPjEjemplo.png
+/build:pruebas/AtlasPjEjemplo.png;pruebas/AtlasPj.png
 
-#begin pruebas/AtlasPjEjemplo.png
+#begin pruebas/PoseIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -53,5 +53,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pruebas/AtlasPjEjemplo.png;pruebas/AtlasPj.png
+/build:pruebas/PoseIdle.png
 
+#begin pruebas/PoseIdleAnim.xml
+/copy:pruebas/PoseIdleAnim.xml

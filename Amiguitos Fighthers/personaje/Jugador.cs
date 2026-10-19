@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -17,18 +18,22 @@ public sealed class Jugador
     private readonly Keys _teclaDerecha;
     private readonly Keys _teclaAtaque;
 
-    private readonly AnimatedSprite _spriteIdle;
-    private readonly AnimatedSprite _spriteAtaque;
+    private enum EstadoAnimacion
+    {
+        Idle,
+        Atacando
+    }
+    private readonly Dictionary<EstadoAnimacion, AnimatedSprite> _animaciones;
 
-    private bool _fuePresionadaAtaque;
+    private EstadoAnimacion _estadoAnimacion;
 
-    public AnimatedSprite Sprite { get; private set; }
+    public AnimatedSprite Sprite => _animaciones[_estadoAnimacion];
 
     public CollisionBody Collision { get; }
 
     public Vector2 Position => Collision.Position;
 
-    public bool EstaAtacando => _spriteAtaque.IsPlaying;
+    public bool EstaAtacando => _estadoAnimacion == EstadoAnimacion.Atacando;
 
     public Jugador(
         TextureAtlas atlas,
@@ -46,26 +51,31 @@ public sealed class Jugador
         _teclaDerecha = derecha;
         _teclaAtaque = ataque;
 
-        _spriteIdle = atlas.CreateAnimatedSprite("Pose1-animacion");
-        _spriteIdle.Scale = new Vector2(3.0f, 3.0f);
+        AnimatedSprite spriteIdle = atlas.CreateAnimatedSprite("Idle");
+        spriteIdle.Scale = new Vector2(3.0f, 3.0f);
 
-        _spriteAtaque = atlas.CreateAnimatedSprite("Pose-animacion");
-        _spriteAtaque.Stop();
-        _spriteAtaque.Scale = new Vector2(3.0f, 3.0f);
+        AnimatedSprite spriteAtaque = atlas.CreateAnimatedSprite("Attack");
+        spriteAtaque.Stop();
+        spriteAtaque.Scale = new Vector2(3.0f, 3.0f);
 
         if (espejo)
         {
-            _spriteIdle.Effects = SpriteEffects.FlipHorizontally;
-            _spriteAtaque.Effects = SpriteEffects.FlipHorizontally;
+            spriteIdle.Effects = SpriteEffects.FlipHorizontally;
+            spriteAtaque.Effects = SpriteEffects.FlipHorizontally;
         }
 
-        Sprite = _spriteIdle;
-        Collision = new CollisionBody(_spriteIdle, posicionInicial);
+        _animaciones = new Dictionary<EstadoAnimacion, AnimatedSprite>
+        {
+            [EstadoAnimacion.Idle] = spriteIdle,
+            [EstadoAnimacion.Atacando] = spriteAtaque
+        };
+
+        Collision = new CollisionBody(spriteIdle, posicionInicial);
     }
 
     public void Update(GameTime gameTime, Rectangle bounds, Jugador otro)
     {
-        ManejarAtaque();
+        ProcesarEntrada();
         ActualizarAnimacion(gameTime);
 
         Vector2 movimiento = ObtenerMovimiento();
@@ -78,30 +88,34 @@ public sealed class Jugador
         Sprite.Draw(spriteBatch, Position);
     }
 
-    private void ManejarAtaque()
+    private void ProcesarEntrada()
     {
-        bool estaPresionada = Core.Input.Keyboard.IsKeyDown(_teclaAtaque);
-
-        if (estaPresionada && !_fuePresionadaAtaque && !_spriteAtaque.IsPlaying)
+        if (Core.Input.Keyboard.WasKeyJustPressed(_teclaAtaque) &&
+            _estadoAnimacion == EstadoAnimacion.Idle)
         {
-            _spriteAtaque.Play(loop: false);
+            CambiarEstado(EstadoAnimacion.Atacando);
         }
-
-        _fuePresionadaAtaque = estaPresionada;
     }
 
     private void ActualizarAnimacion(GameTime gameTime)
     {
-        if (_spriteAtaque.IsPlaying)
+        Sprite.Update(gameTime);
+
+        if (_estadoAnimacion == EstadoAnimacion.Atacando && !Sprite.IsPlaying)
         {
-            _spriteAtaque.Update(gameTime);
-            Sprite = _spriteAtaque;
+            CambiarEstado(EstadoAnimacion.Idle);
         }
-        else
+    }
+
+    private void CambiarEstado(EstadoAnimacion nuevoEstado)
+    {
+        if (_estadoAnimacion == nuevoEstado)
         {
-            _spriteIdle.Update(gameTime);
-            Sprite = _spriteIdle;
+            return;
         }
+
+        _estadoAnimacion = nuevoEstado;
+        Sprite.Play(loop: nuevoEstado == EstadoAnimacion.Idle);
     }
 
     private Vector2 ObtenerMovimiento()

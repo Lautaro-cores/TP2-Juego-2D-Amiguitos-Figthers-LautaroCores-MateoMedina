@@ -10,13 +10,13 @@
         <Region name="Pose6" x="294" y="0" width="49" height="73" />
     </Regions>
     <Animations>
-        <Animation name="Pose-animacion" delay="150">
+        <Animation name="Attack" delay="150">
             <Frame region="Pose2" />
             <Frame region="Pose3" />
             <Frame region="Pose2" />
             <Frame region="Pose1" />
         </Animation>
-        <Animation name="Pose1-animacion" delay="100">
+        <Animation name="Idle" delay="100">
             <Frame region="Pose4" />
             <Frame region="Pose5" />
             <Frame region="Pose6" />

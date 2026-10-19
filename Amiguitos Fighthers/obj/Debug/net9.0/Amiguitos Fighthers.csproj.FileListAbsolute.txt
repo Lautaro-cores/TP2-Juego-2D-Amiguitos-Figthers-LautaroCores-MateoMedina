@@ -133,3 +133,5 @@ C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCor
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml

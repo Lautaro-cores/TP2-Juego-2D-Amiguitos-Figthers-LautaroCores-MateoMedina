@@ -81,12 +81,23 @@ C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mate
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.pdb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\atlaspj.xml
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas-definition.xml
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas.xnb
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
+C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\atlaspj.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas-definition.xml
-C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas.xnb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.deps.json
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.runtimeconfig.json
@@ -126,12 +137,3 @@ C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mat
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.pdb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\atlaspj.xml
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas-definition.xml
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas.xnb
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
-C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
-C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
-C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml

@@ -8,6 +8,10 @@
         <Region name="Pose4" x="185" y="0" width="60" height="73" />
         <Region name="Pose5" x="244" y="0" width="50" height="73" />
         <Region name="Pose6" x="294" y="0" width="49" height="73" />
+        <Region name="Lanzar1" x="0" y="78" width="56" height="73" />
+        <Region name="Lanzar2" x="56" y="78" width="62" height="73" />
+        <Region name="BolaFuego1" x="343" y="0" width="33" height="16" />
+        <Region name="BolaFuego2" x="343" y="17" width="39" height="19" />
     </Regions>
     <Animations>
         <Animation name="Attack" delay="150">
@@ -21,6 +25,14 @@
             <Frame region="Pose5" />
             <Frame region="Pose6" />
             <Frame region="Pose4" />
+        </Animation>
+        <Animation name="Lanzar" delay="150">
+            <Frame region="Lanzar1" />
+            <Frame region="Lanzar2" />
+        </Animation>
+        <Animation name="FireBall" delay="100">
+            <Frame region="BolaFuego1" />
+            <Frame region="BolaFuego2" />
         </Animation>
     </Animations>
 </TextureAtlas>

@@ -8,7 +8,7 @@ using MonoGameLibrary.Physics;
 
 namespace Amiguitos_Fighthers;
 
-public sealed class Jugador
+public sealed class Jugador : Personaje
 {
     private const float Velocidad = 5.0f;
 
@@ -18,10 +18,14 @@ public sealed class Jugador
     private readonly Keys _teclaDerecha;
     private readonly Keys _teclaAtaque;
 
+    private readonly Keys _teclaBolaFuego;
+
     private enum EstadoAnimacion
     {
         Idle,
-        Atacando
+        Atacando,
+
+        Lanzando
     }
     private readonly Dictionary<EstadoAnimacion, AnimatedSprite> _animaciones;
 
@@ -35,7 +39,12 @@ public sealed class Jugador
 
     public bool EstaAtacando => _estadoAnimacion == EstadoAnimacion.Atacando;
 
+    public bool EstaLanzando => _estadoAnimacion == EstadoAnimacion.Lanzando;
+
+    public PersonajeDefinicion Definicion { get; }
+
     public Jugador(
+        PersonajeDefinicion definicion,
         TextureAtlas atlas,
         Vector2 posicionInicial,
         Keys arriba,
@@ -43,31 +52,45 @@ public sealed class Jugador
         Keys izquierda,
         Keys derecha,
         Keys ataque,
-        bool espejo = false)
+        Keys BolaFuego,
+        bool espejo = false
+        ) : base(definicion.VidaMaxima)
     {
+        Definicion = definicion;
         _teclaArriba = arriba;
         _teclaAbajo = abajo;
         _teclaIzquierda = izquierda;
         _teclaDerecha = derecha;
         _teclaAtaque = ataque;
+        _teclaBolaFuego = BolaFuego;
 
-        AnimatedSprite spriteIdle = atlas.CreateAnimatedSprite("Idle");
+        AnimatedSprite spriteIdle = atlas.CreateAnimatedSprite(definicion.AnimacionIdle);
         spriteIdle.Scale = new Vector2(3.0f, 3.0f);
 
-        AnimatedSprite spriteAtaque = atlas.CreateAnimatedSprite("Attack");
+        AnimatedSprite spriteAtaque = atlas.CreateAnimatedSprite(definicion.AnimacionAtaque);
         spriteAtaque.Stop();
         spriteAtaque.Scale = new Vector2(3.0f, 3.0f);
+
+        AnimatedSprite spriteLanzar = atlas.CreateAnimatedSprite(definicion.AnimacionLanzar);
+        spriteLanzar.Stop();
+        spriteLanzar.Scale = new Vector2(3.0f, 3.0f);
+
+        
+
 
         if (espejo)
         {
             spriteIdle.Effects = SpriteEffects.FlipHorizontally;
             spriteAtaque.Effects = SpriteEffects.FlipHorizontally;
+            spriteLanzar.Effects = SpriteEffects.FlipHorizontally;
+           
         }
 
         _animaciones = new Dictionary<EstadoAnimacion, AnimatedSprite>
         {
             [EstadoAnimacion.Idle] = spriteIdle,
-            [EstadoAnimacion.Atacando] = spriteAtaque
+            [EstadoAnimacion.Atacando] = spriteAtaque,
+            [EstadoAnimacion.Lanzando] = spriteLanzar
         };
 
         Collision = new CollisionBody(spriteIdle, posicionInicial);
@@ -95,6 +118,12 @@ public sealed class Jugador
         {
             CambiarEstado(EstadoAnimacion.Atacando);
         }
+
+        if (Core.Input.Keyboard.WasKeyJustPressed(_teclaBolaFuego) &&
+            _estadoAnimacion == EstadoAnimacion.Idle)
+        {
+            CambiarEstado(EstadoAnimacion.Lanzando);
+        }
     }
 
     private void ActualizarAnimacion(GameTime gameTime)
@@ -102,6 +131,11 @@ public sealed class Jugador
         Sprite.Update(gameTime);
 
         if (_estadoAnimacion == EstadoAnimacion.Atacando && !Sprite.IsPlaying)
+        {
+            CambiarEstado(EstadoAnimacion.Idle);
+        }
+
+        if (_estadoAnimacion == EstadoAnimacion.Lanzando && !Sprite.IsPlaying)
         {
             CambiarEstado(EstadoAnimacion.Idle);
         }

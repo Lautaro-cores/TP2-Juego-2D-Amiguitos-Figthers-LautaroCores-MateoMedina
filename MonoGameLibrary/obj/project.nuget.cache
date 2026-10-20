@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "+fQWIahWvfQ=",
+  "dgSpecHash": "w+f4sAFi4fo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Mateo\\OneDrive\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lautaro\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.6\\monogame.framework.desktopgl.3.8.6.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\monogame.library.openal\\1.24.3.4\\monogame.library.openal.1.24.3.4.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\monogame.library.sdl\\2.32.10.2\\monogame.library.sdl.2.32.10.2.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\nvorbis\\0.10.4\\nvorbis.0.10.4.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.20\\microsoft.netcore.app.ref.9.0.20.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.20\\microsoft.windowsdesktop.app.ref.9.0.20.nupkg.sha512",
-    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.20\\microsoft.aspnetcore.app.ref.9.0.20.nupkg.sha512"
+    "C:\\Users\\Mateo\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.6\\monogame.framework.desktopgl.3.8.6.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\monogame.library.openal\\1.24.3.4\\monogame.library.openal.1.24.3.4.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\monogame.library.sdl\\2.32.10.2\\monogame.library.sdl.2.32.10.2.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\nvorbis\\0.10.4\\nvorbis.0.10.4.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.16\\microsoft.netcore.app.ref.9.0.16.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.16\\microsoft.windowsdesktop.app.ref.9.0.16.nupkg.sha512",
+    "C:\\Users\\Mateo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.16\\microsoft.aspnetcore.app.ref.9.0.16.nupkg.sha512"
   ],
   "logs": []
 }

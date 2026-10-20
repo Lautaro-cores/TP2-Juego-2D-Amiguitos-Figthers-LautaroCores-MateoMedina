@@ -25,15 +25,19 @@ public class Game1 : Core
         TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
 
         _jugador1 = new Jugador(
+            PersonajeDefinicion.CrearGuerrero(atlaspj),
             atlaspj,
             new Vector2(200.0f, 300.0f),
             Keys.W,
             Keys.S,
             Keys.A,
             Keys.D,
-            Keys.J);
+            Keys.J,
+            Keys.K
+            );
 
         _jugador2 = new Jugador(
+            PersonajeDefinicion.CrearGuerrero(atlaspj),
             atlaspj,
             new Vector2(900.0f, 300.0f),
             Keys.Up,
@@ -41,6 +45,7 @@ public class Game1 : Core
             Keys.Left,
             Keys.Right,
             Keys.Space,
+            Keys.M,
             espejo: true);
     }
 

@@ -62,6 +62,9 @@ public class Game1 : Core
             GraphicsDevice.PresentationParameters.BackBufferWidth,
             GraphicsDevice.PresentationParameters.BackBufferHeight);
 
+        // Se actualiza a cada jugador con su rival correspondiente.
+        // Esto es lo que permite que el ataque de jugador1 detecte a jugador2
+        // y viceversa, sin depender de una única instancia de colisión.
         _jugador1.Update(gameTime, screenBounds, _jugador2);
         _jugador2.Update(gameTime, screenBounds, _jugador1);
     }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas>
-    <Texture>pruebas/AtlasPjEjemplo</Texture>
+    <Texture>pruebas/AtlasPj</Texture>
     <Regions>
         <Region name="Pose1" x="0" y="0" width="60" height="73" />
         <Region name="Pose2" x="61" y="0" width="55" height="73" />
@@ -8,8 +8,8 @@
         <Region name="Pose4" x="185" y="0" width="60" height="73" />
         <Region name="Pose5" x="244" y="0" width="50" height="73" />
         <Region name="Pose6" x="294" y="0" width="49" height="73" />
-        <Region name="Lanzar1" x="0" y="78" width="56" height="73" />
-        <Region name="Lanzar2" x="56" y="78" width="62" height="73" />
+        <Region name="Lanzar1" x="0" y="78" width="56" height="74" />
+        <Region name="Lanzar2" x="56" y="78" width="62" height="74" />
         <Region name="BolaFuego1" x="343" y="0" width="33" height="16" />
         <Region name="BolaFuego2" x="343" y="17" width="39" height="19" />
     </Regions>

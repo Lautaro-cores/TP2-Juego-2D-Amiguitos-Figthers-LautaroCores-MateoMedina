@@ -39,15 +39,18 @@ public sealed class PersonajeDefinicion
             new HabilidadGolpe(
                 nombre: "Golpe cargado",
                 danio: 35,
-                alcance: 80.0f,
-                sprite: atlas.CreateAnimatedSprite("Attack")),
+                sprite: atlas.CreateAnimatedSprite("Attack"),
+                altoHitbox: 30,
+                anchoHitbox: 30),
             
             new HabilidadProyectil(
                 nombre: "Bola de fuego",
                 danio:20,
                 velocidad: 10.0f,
                 sprite: atlas.CreateAnimatedSprite("Lanzar"),
-                spriteProyectil: atlas.CreateAnimatedSprite("FireBall"))
+                spriteProyectil: atlas.CreateAnimatedSprite("FireBall"),
+                anchoHitbox: 20,
+                altoHitbox: 20)
         };
 
 

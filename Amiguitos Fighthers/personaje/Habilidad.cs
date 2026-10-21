@@ -11,11 +11,16 @@ public abstract class Habilidad
     public int Danio { get; }
     public AnimatedSprite Sprite { get; }
 
-    protected Habilidad(string nombre, int danio, AnimatedSprite sprite)
+    public int AnchoHitbox { get; }
+    public int AltoHitbox { get; }
+
+    protected Habilidad(string nombre, int danio, AnimatedSprite sprite, int anchoHitbox, int altoHitbox)
     {
         Nombre = nombre;
         Danio = danio;
         Sprite = sprite;
+        AnchoHitbox = anchoHitbox;
+        AltoHitbox = altoHitbox;    
     }
 }
 
@@ -30,8 +35,10 @@ public sealed class HabilidadEmbestida : Habilidad
         string nombre,
         int danio,
         float distancia,
-        AnimatedSprite sprite)
-        : base(nombre, danio, sprite)
+        AnimatedSprite sprite,
+        int anchoHitbox,
+        int altoHitbox)
+        : base(nombre, danio, sprite, altoHitbox, anchoHitbox)
     {
         Distancia = distancia;
     }
@@ -49,8 +56,10 @@ public sealed class HabilidadProyectil : Habilidad
         int danio,
         float velocidad,
         AnimatedSprite sprite,
-        AnimatedSprite spriteProyectil)
-        : base(nombre, danio, sprite)
+        AnimatedSprite spriteProyectil,
+        int anchoHitbox,
+        int altoHitbox)
+        : base(nombre, danio, sprite, anchoHitbox, altoHitbox)
     {
         Velocidad = velocidad;
         SpriteProyectil = spriteProyectil;
@@ -62,17 +71,17 @@ public sealed class HabilidadProyectil : Habilidad
 //  que va a variar la distancia del ataque
 public sealed class HabilidadGolpe : Habilidad
 {
-    public float Alcance { get; }
+    
 
     public HabilidadGolpe(
         string nombre,
         int danio,
-        float alcance,
-        AnimatedSprite sprite
-       )
-        : base(nombre, danio, sprite)
+        AnimatedSprite sprite,
+        int anchoHitbox,
+        int altoHitbox)
+        : base(nombre, danio, sprite, anchoHitbox, altoHitbox)
     {
-        Alcance = alcance;
+        
         
     }
 }

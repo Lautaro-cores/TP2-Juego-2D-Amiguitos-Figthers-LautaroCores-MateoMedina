@@ -12,9 +12,13 @@ namespace Amiguitos_Fighthers;
 public abstract class Personaje
 {
     public int Vida { get; private set; }
+    public int VidaMaxima { get; }
+    public float PorcentajeVida => Vida / (float)VidaMaxima;
 
     protected Personaje(int vidaInicial)
     {
+
+        VidaMaxima = vidaInicial;
         Vida = vidaInicial;
     }
 

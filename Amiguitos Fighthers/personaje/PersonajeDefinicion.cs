@@ -61,7 +61,7 @@ public sealed class PersonajeDefinicion
             nombre: "Guerrero",
             vidaMaxima: 1200,
             movimientoBasico: new MovimientoBasico(
-                danio: 35,
+                danio: 500,
                 velocidadMovimiento: 5.0f,
                 velocidadSalto: 900.0f,
                 gravedad: 1500.0f,

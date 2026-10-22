@@ -25,19 +25,6 @@ public sealed class MovimientoBasico
         int anchoHitbox,
         int altoHitbox)
     {
-        if (danio <= 0)
-            throw new ArgumentOutOfRangeException(nameof(danio), "El daño debe ser mayor que cero.");
-        if (velocidadMovimiento <= 0)
-            throw new ArgumentOutOfRangeException(nameof(velocidadMovimiento), "La velocidad debe ser mayor que cero.");
-        if (velocidadSalto <= 0)
-            throw new ArgumentOutOfRangeException(nameof(velocidadSalto), "La velocidad de salto debe ser mayor que cero.");
-        if (gravedad <= 0)
-            throw new ArgumentOutOfRangeException(nameof(gravedad), "La gravedad debe ser mayor que cero.");
-        if (anchoHitbox <= 0)
-            throw new ArgumentOutOfRangeException(nameof(anchoHitbox), "El ancho de la hitbox debe ser mayor que cero.");
-        if (altoHitbox <= 0)
-            throw new ArgumentOutOfRangeException(nameof(altoHitbox), "El alto de la hitbox debe ser mayor que cero.");
-
         Danio = danio;
         VelocidadMovimiento = velocidadMovimiento;
         VelocidadSalto = velocidadSalto;

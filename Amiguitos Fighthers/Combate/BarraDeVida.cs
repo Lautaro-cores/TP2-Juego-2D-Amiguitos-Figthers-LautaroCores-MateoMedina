@@ -25,9 +25,11 @@ public sealed class BarraDeVida
             _bounds.Width - borde * 2,
             _bounds.Height - borde * 2);
 
+        // El fondo oscuro muestra la parte de vida que ya se perdió.
         spriteBatch.Draw(_pixel, _bounds, Color.Black);
         spriteBatch.Draw(_pixel, interior, Color.DarkRed);
 
+        // El relleno cambia de ancho según el porcentaje de vida actual.
         int anchoVida = (int)(interior.Width * _personaje.PorcentajeVida);
         if (anchoVida > 0)
         {

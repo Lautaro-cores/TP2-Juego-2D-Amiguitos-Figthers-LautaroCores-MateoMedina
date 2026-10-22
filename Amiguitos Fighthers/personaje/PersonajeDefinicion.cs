@@ -60,8 +60,9 @@ public sealed class PersonajeDefinicion
         return new PersonajeDefinicion(
             nombre: "Guerrero",
             vidaMaxima: 1200,
+            // Los parámetros de movimiento básico se configuran individualmente por personaje.
             movimientoBasico: new MovimientoBasico(
-                danio: 500,
+                danio: 35,
                 velocidadMovimiento: 5.0f,
                 velocidadSalto: 900.0f,
                 gravedad: 1500.0f,

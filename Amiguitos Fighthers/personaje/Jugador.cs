@@ -11,7 +11,8 @@ namespace Amiguitos_Fighthers;
 
 public sealed class Jugador : Personaje
 {
-    private const int AlturaSuelo = 200;
+    // El suelo queda fijo respecto al borde inferior de la pantalla.
+    private const int AlturaSuelo = 50;
 
     private readonly Keys _teclaSalto;
     private readonly Keys _teclaAbajo;                              
@@ -70,15 +71,15 @@ public sealed class Jugador : Personaje
         _teclaBolaFuego = BolaFuego;
 
         AnimatedSprite spriteIdle = atlas.CreateAnimatedSprite(definicion.AnimacionIdle);
-        spriteIdle.Scale = new Vector2(3.0f, 3.0f);
+        spriteIdle.Scale = new Vector2(3.5f, 3.5f);
         spriteIdle.Play(loop: true);
 
         AnimatedSprite spriteAtaque = atlas.CreateAnimatedSprite(definicion.AnimacionAtaque);
-        spriteAtaque.Scale = new Vector2(3.0f, 3.0f);
+        spriteAtaque.Scale = new Vector2(3.5f, 3.5f);
         spriteAtaque.Stop();
 
         AnimatedSprite spriteLanzar = atlas.CreateAnimatedSprite(definicion.AnimacionLanzar);
-        spriteLanzar.Scale = new Vector2(3.0f, 3.0f);
+        spriteLanzar.Scale = new Vector2(3.5f, 3.5f);
         spriteLanzar.Stop();
 
         if (espejo)
@@ -109,11 +110,13 @@ public sealed class Jugador : Personaje
         ActualizarAnimacion(gameTime);
 
         Vector2 movimiento = ObtenerMovimiento();
+        // El movimiento vertical lo controla el salto y la gravedad, no las teclas de dirección.
         movimiento.Y = _movimientoBasico.ActualizarSalto(gameTime);
         Collision.Move(movimiento, otro.Collision);
 
         int sueloY = Math.Max(bounds.Top, bounds.Bottom - AlturaSuelo);
         Rectangle limitesEscenario = new(bounds.Left, bounds.Top, bounds.Width, sueloY - bounds.Top);
+        // Impide salir del escenario y coloca los pies sobre el suelo al aterrizar.
         Collision.KeepInside(limitesEscenario);
 
         if (Collision.Bounds.Bottom >= sueloY)

@@ -13,6 +13,7 @@ public abstract class Personaje
 {
     public int Vida { get; private set; }
     public int VidaMaxima { get; }
+    // La proporción permite que la barra funcione con personajes de distintas vidas máximas.
     public float PorcentajeVida => Vida / (float)VidaMaxima;
 
     protected Personaje(int vidaInicial)

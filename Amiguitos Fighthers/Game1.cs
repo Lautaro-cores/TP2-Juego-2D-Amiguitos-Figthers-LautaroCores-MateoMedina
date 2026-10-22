@@ -10,6 +10,7 @@ public class Game1 : Core
 {
     private Jugador _jugador1;
     private Jugador _jugador2;
+    private Texture2D _fondo;
     private Texture2D _pixel;
     private BarraDeVida _barraVidaJugador1;
     private BarraDeVida _barraVidaJugador2;
@@ -26,11 +27,13 @@ public class Game1 : Core
     protected override void LoadContent()
     {
         TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
+        // La textura se carga como contenido administrado y se reutiliza como fondo.
+        _fondo = Content.Load<Texture2D>("pruebas/bufet");
 
         _jugador1 = new Jugador(
             PersonajeDefinicion.CrearGuerrero(atlaspj),
             atlaspj,
-            new Vector2(200.0f, 300.0f),
+            new Vector2(200.0f, 500.0f),
             Keys.W,
             Keys.S,
             Keys.A,
@@ -42,7 +45,7 @@ public class Game1 : Core
         _jugador2 = new Jugador(
             PersonajeDefinicion.CrearGuerrero(atlaspj),
             atlaspj,
-            new Vector2(900.0f, 300.0f),
+            new Vector2(900.0f, 500.0f),
             Keys.Up,
             Keys.Down,
             Keys.Left,
@@ -80,6 +83,8 @@ public class Game1 : Core
         GraphicsDevice.Clear(Color.CornflowerBlue);
         SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
+        // El fondo se dibuja primero para que jugadores y HUD queden por encima.
+        SpriteBatch.Draw(_fondo, GraphicsDevice.Viewport.Bounds, Color.White);
         _jugador1.Draw(SpriteBatch);
         _jugador2.Draw(SpriteBatch);
         _barraVidaJugador1.Draw(SpriteBatch);
@@ -96,6 +101,7 @@ public class Game1 : Core
             return;
         }
 
+        // Se crea durante el dibujo, cuando el GraphicsDevice de Core ya está inicializado.
         _pixel = new Texture2D(GraphicsDevice, 1, 1);
         _pixel.SetData(new[] { Color.White });
 

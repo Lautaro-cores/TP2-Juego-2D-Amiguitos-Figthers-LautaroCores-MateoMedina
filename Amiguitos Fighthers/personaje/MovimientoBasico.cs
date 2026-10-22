@@ -8,6 +8,7 @@ public sealed class MovimientoBasico
     private readonly Hitbox _hitbox = new();
     private bool _direccionAtaqueDerecha;
 
+    // Estos valores permiten ajustar el movimiento y el ataque de cada personaje.
     public int Danio { get; }
     public float VelocidadMovimiento { get; }
     public float VelocidadSalto { get; }
@@ -35,6 +36,7 @@ public sealed class MovimientoBasico
 
     public MovimientoBasico CrearInstancia()
     {
+        // Cada jugador necesita su propio estado de salto y su propia hitbox.
         return new MovimientoBasico(
             Danio,
             VelocidadMovimiento,
@@ -62,6 +64,7 @@ public sealed class MovimientoBasico
             return 0;
         }
 
+        // La gravedad se calcula según el tiempo transcurrido para mantener el salto uniforme.
         float segundos = (float)gameTime.ElapsedGameTime.TotalSeconds;
         _velocidadVertical += Gravedad * segundos;
         return _velocidadVertical * segundos;
@@ -93,6 +96,7 @@ public sealed class MovimientoBasico
             return false;
         }
 
+        // El daño del movimiento básico se aplica una sola vez al impactar.
         objetivo.RecibirDanio(Danio);
         return true;
     }

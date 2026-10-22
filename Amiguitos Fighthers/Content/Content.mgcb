@@ -43,6 +43,18 @@
 /processorParam:TextureFormat=Color
 /build:pruebas/AtlasPjEjemplo.png;pruebas/AtlasPj.png
 
+#begin pruebas/bufet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pruebas/bufet.png
+
 #begin pruebas/PoseIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -57,3 +69,4 @@
 
 #begin pruebas/PoseIdleAnim.xml
 /copy:pruebas/PoseIdleAnim.xml
+

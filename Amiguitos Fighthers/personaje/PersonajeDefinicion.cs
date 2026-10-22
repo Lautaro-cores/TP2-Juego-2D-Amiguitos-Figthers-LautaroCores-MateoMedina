@@ -10,6 +10,7 @@ public sealed class PersonajeDefinicion
 {
     public string Nombre { get; }
     public int VidaMaxima { get; }
+    public MovimientoBasico MovimientoBasico { get; }
     public Habilidad[] Habilidades { get; }
     public string AnimacionIdle { get; }
     public string AnimacionAtaque { get; }
@@ -19,6 +20,7 @@ public sealed class PersonajeDefinicion
     public PersonajeDefinicion(
         string nombre,
         int vidaMaxima,
+        MovimientoBasico movimientoBasico,
         Habilidad[] habilidades,
         string animacionIdle,
         string animacionAtaque,
@@ -26,6 +28,7 @@ public sealed class PersonajeDefinicion
     {
         Nombre = nombre;
         VidaMaxima = vidaMaxima;
+        MovimientoBasico = movimientoBasico;
         Habilidades = habilidades;
         AnimacionIdle = animacionIdle;
         AnimacionAtaque = animacionAtaque;
@@ -57,6 +60,11 @@ public sealed class PersonajeDefinicion
         return new PersonajeDefinicion(
             nombre: "Guerrero",
             vidaMaxima: 1200,
+            movimientoBasico: new MovimientoBasico(
+                danio: 35,
+                velocidadMovimiento: 5.0f,
+                anchoHitbox: 30,
+                altoHitbox: 30),
             habilidades: habilidades,
             animacionIdle: "Idle",
             animacionAtaque: "Attack",

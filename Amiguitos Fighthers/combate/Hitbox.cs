@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 
 namespace Amiguitos_Fighthers;
@@ -42,7 +41,6 @@ public sealed class Hitbox
 
         if (impacto)
         {
-            Console.WriteLine("Colisiono");
             Desactivar();
         }
 

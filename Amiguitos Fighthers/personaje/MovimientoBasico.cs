@@ -10,21 +10,80 @@ public sealed class MovimientoBasico
 
     public int Danio { get; }
     public float VelocidadMovimiento { get; }
+    public float VelocidadSalto { get; }
+    public float Gravedad { get; }
     public int AnchoHitbox { get; }
     public int AltoHitbox { get; }
+    public bool EstaEnElSuelo { get; private set; }
+    private float _velocidadVertical;
 
-    public MovimientoBasico(int danio, float velocidadMovimiento, int anchoHitbox, int altoHitbox)
+    public MovimientoBasico(
+        int danio,
+        float velocidadMovimiento,
+        float velocidadSalto,
+        float gravedad,
+        int anchoHitbox,
+        int altoHitbox)
     {
+        if (danio <= 0)
+            throw new ArgumentOutOfRangeException(nameof(danio), "El daño debe ser mayor que cero.");
+        if (velocidadMovimiento <= 0)
+            throw new ArgumentOutOfRangeException(nameof(velocidadMovimiento), "La velocidad debe ser mayor que cero.");
+        if (velocidadSalto <= 0)
+            throw new ArgumentOutOfRangeException(nameof(velocidadSalto), "La velocidad de salto debe ser mayor que cero.");
+        if (gravedad <= 0)
+            throw new ArgumentOutOfRangeException(nameof(gravedad), "La gravedad debe ser mayor que cero.");
+        if (anchoHitbox <= 0)
+            throw new ArgumentOutOfRangeException(nameof(anchoHitbox), "El ancho de la hitbox debe ser mayor que cero.");
+        if (altoHitbox <= 0)
+            throw new ArgumentOutOfRangeException(nameof(altoHitbox), "El alto de la hitbox debe ser mayor que cero.");
 
         Danio = danio;
         VelocidadMovimiento = velocidadMovimiento;
+        VelocidadSalto = velocidadSalto;
+        Gravedad = gravedad;
         AnchoHitbox = anchoHitbox;
         AltoHitbox = altoHitbox;
     }
 
     public MovimientoBasico CrearInstancia()
     {
-        return new MovimientoBasico(Danio, VelocidadMovimiento, AnchoHitbox, AltoHitbox);
+        return new MovimientoBasico(
+            Danio,
+            VelocidadMovimiento,
+            VelocidadSalto,
+            Gravedad,
+            AnchoHitbox,
+            AltoHitbox);
+    }
+
+    public void Saltar()
+    {
+        if (!EstaEnElSuelo)
+        {
+            return;
+        }
+
+        _velocidadVertical = -VelocidadSalto;
+        EstaEnElSuelo = false;
+    }
+
+    public float ActualizarSalto(GameTime gameTime)
+    {
+        if (EstaEnElSuelo)
+        {
+            return 0;
+        }
+
+        float segundos = (float)gameTime.ElapsedGameTime.TotalSeconds;
+        _velocidadVertical += Gravedad * segundos;
+        return _velocidadVertical * segundos;
+    }
+
+    public void Aterrizar()
+    {
+        _velocidadVertical = 0;
+        EstaEnElSuelo = true;
     }
 
     public void IniciarAtaque(bool mirandoDerecha)

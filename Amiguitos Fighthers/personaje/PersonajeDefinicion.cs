@@ -63,6 +63,8 @@ public sealed class PersonajeDefinicion
             movimientoBasico: new MovimientoBasico(
                 danio: 35,
                 velocidadMovimiento: 5.0f,
+                velocidadSalto: 900.0f,
+                gravedad: 1500.0f,
                 anchoHitbox: 30,
                 altoHitbox: 30),
             habilidades: habilidades,

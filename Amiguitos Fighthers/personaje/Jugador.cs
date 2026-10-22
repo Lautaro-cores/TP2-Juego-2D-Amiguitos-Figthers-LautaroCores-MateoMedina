@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,8 +11,10 @@ namespace Amiguitos_Fighthers;
 
 public sealed class Jugador : Personaje
 {
-    private readonly Keys _teclaArriba;
-    private readonly Keys _teclaAbajo;
+    private const int AlturaSuelo = 200;
+
+    private readonly Keys _teclaSalto;
+    private readonly Keys _teclaAbajo;                              
     private readonly Keys _teclaIzquierda;
     private readonly Keys _teclaDerecha;
     private readonly Keys _teclaAtaque;
@@ -48,7 +51,7 @@ public sealed class Jugador : Personaje
         PersonajeDefinicion definicion,
         TextureAtlas atlas,
         Vector2 posicionInicial,
-        Keys arriba,
+        Keys salto,
         Keys abajo,
         Keys izquierda,
         Keys derecha,
@@ -59,7 +62,7 @@ public sealed class Jugador : Personaje
     {
         Definicion = definicion;
         _movimientoBasico = definicion.MovimientoBasico.CrearInstancia();
-        _teclaArriba = arriba;
+        _teclaSalto = salto;
         _teclaAbajo = abajo;
         _teclaIzquierda = izquierda;
         _teclaDerecha = derecha;
@@ -106,8 +109,17 @@ public sealed class Jugador : Personaje
         ActualizarAnimacion(gameTime);
 
         Vector2 movimiento = ObtenerMovimiento();
+        movimiento.Y = _movimientoBasico.ActualizarSalto(gameTime);
         Collision.Move(movimiento, otro.Collision);
-        Collision.KeepInside(bounds);
+
+        int sueloY = Math.Max(bounds.Top, bounds.Bottom - AlturaSuelo);
+        Rectangle limitesEscenario = new(bounds.Left, bounds.Top, bounds.Width, sueloY - bounds.Top);
+        Collision.KeepInside(limitesEscenario);
+
+        if (Collision.Bounds.Bottom >= sueloY)
+        {
+            _movimientoBasico.Aterrizar();
+        }
 
         _movimientoBasico.IntentarAtacar(Collision.Bounds, otro, otro.Collision.Bounds);
     }
@@ -119,6 +131,11 @@ public sealed class Jugador : Personaje
 
     private void ProcesarEntrada(Jugador otro)
     {
+        if (Core.Input.Keyboard.IsKeyDown(_teclaSalto))
+        {
+            _movimientoBasico.Saltar();
+        }
+
         if (Core.Input.Keyboard.WasKeyJustPressed(_teclaAtaque) &&
             _estadoAnimacion == EstadoAnimacion.Idle)
         {
@@ -173,8 +190,6 @@ public sealed class Jugador : Personaje
     {
         Vector2 movimiento = Vector2.Zero;
 
-        if (Core.Input.Keyboard.IsKeyDown(_teclaArriba)) movimiento.Y -= _movimientoBasico.VelocidadMovimiento;
-        if (Core.Input.Keyboard.IsKeyDown(_teclaAbajo)) movimiento.Y += _movimientoBasico.VelocidadMovimiento;
         if (Core.Input.Keyboard.IsKeyDown(_teclaIzquierda)) movimiento.X -= _movimientoBasico.VelocidadMovimiento;
         if (Core.Input.Keyboard.IsKeyDown(_teclaDerecha)) movimiento.X += _movimientoBasico.VelocidadMovimiento;
 

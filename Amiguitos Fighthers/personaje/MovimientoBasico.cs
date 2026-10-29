@@ -18,6 +18,8 @@ public sealed class MovimientoBasico
     public bool EstaEnElSuelo { get; private set; }
     private float _velocidadVertical;
 
+    public bool GolpeAcertado { get; private set; }
+
     public MovimientoBasico(
         int danio,
         float velocidadMovimiento,
@@ -78,6 +80,7 @@ public sealed class MovimientoBasico
 
     public void IniciarAtaque(bool mirandoDerecha)
     {
+        GolpeAcertado = false;
         _direccionAtaqueDerecha = mirandoDerecha;
         _hitbox.Activar();
     }
@@ -96,13 +99,35 @@ public sealed class MovimientoBasico
             return false;
         }
 
-        // El daño del movimiento básico se aplica una sola vez al impactar.
-        objetivo.RecibirDanio(Danio);
+        // El daño se aplica una sola vez al impactar. Si el golpe entra dentro
+        // de la protección del rival, se calcula un daño reducido en lugar del normal.
+        int danioFinal = Danio;
+        Jugador jugadorObjetivo = objetivo as Jugador;
+
+        if (jugadorObjetivo != null && jugadorObjetivo.BloqueaAtaque(_hitbox.Bounds))
+        {
+            danioFinal = Math.Max(1, Danio / 2);
+        }
+
+        objetivo.RecibirDanio(danioFinal);
+        GolpeAcertado = true;
         return true;
     }
 
+    public bool ConsumirGolpeAcertado()
+{
+    if (!GolpeAcertado)
+    {
+        return false;
+    }
+
+    GolpeAcertado = false;
+    return true;
+}
+
     public void FinalizarAtaque()
     {
+            GolpeAcertado = false;
         _hitbox.Desactivar();
     }
 

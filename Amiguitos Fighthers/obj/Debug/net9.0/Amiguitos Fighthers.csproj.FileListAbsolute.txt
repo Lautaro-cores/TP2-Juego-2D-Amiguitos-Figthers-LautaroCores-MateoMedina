@@ -138,3 +138,4 @@ C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mat
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb

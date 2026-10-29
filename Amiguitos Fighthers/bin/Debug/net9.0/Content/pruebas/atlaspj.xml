@@ -8,10 +8,13 @@
         <Region name="Pose4" x="185" y="0" width="60" height="73" />
         <Region name="Pose5" x="244" y="0" width="50" height="73" />
         <Region name="Pose6" x="294" y="0" width="49" height="73" />
-        <Region name="Lanzar1" x="0" y="78" width="56" height="74" />
-        <Region name="Lanzar2" x="56" y="78" width="62" height="74" />
-        <Region name="BolaFuego1" x="343" y="0" width="33" height="16" />
-        <Region name="BolaFuego2" x="343" y="17" width="39" height="19" />
+        <Region name="PoseCubrirse1" x="344" y="3" width="47" height="70"/>
+        <Region name="PoseCubrirse2" x="394" y="3" width="58" height="70"/>
+        <Region name="PoseCubrirse3" x="3" y="75" width="56" height="70"/>
+        <Region name="PoseCubrirse4" x="61" y="75" width="58" height="70"/>
+        <Region name="PoseAgacharse1" x="2" y="147" width="45" height="49"/>
+        <Region name="PoseAgacharse2" x="48" y="147" width="46" height="49"/>
+
     </Regions>
     <Animations>
         <Animation name="Attack" delay="150">
@@ -26,13 +29,15 @@
             <Frame region="Pose6" />
             <Frame region="Pose4" />
         </Animation>
-        <Animation name="Lanzar" delay="150">
-            <Frame region="Lanzar1" />
-            <Frame region="Lanzar2" />
+        <Animation name="BloquearYCaminar" delay="150">
+            <Frame region="PoseCubrirse1"/>
+            <Frame region="PoseCubrirse2"/>
+            <Frame region="PoseCubrirse3"/>
+            <Frame region="PoseCubrirse4"/>
         </Animation>
-        <Animation name="FireBall" delay="100">
-            <Frame region="BolaFuego1" />
-            <Frame region="BolaFuego2" />
+        <Animation name="Agacharse" delay="300">
+            <Frame region="PoseAgacharse1"/>
+            <Frame region="PoseAgacharse2"/>
         </Animation>
     </Animations>
 </TextureAtlas>

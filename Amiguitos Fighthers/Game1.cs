@@ -8,6 +8,9 @@ namespace Amiguitos_Fighthers;
 
 public class Game1 : Core
 {
+    private EstadoCombate _estadoCombate;
+
+
     private Jugador _jugador1;
     private Jugador _jugador2;
     private Texture2D _fondo;
@@ -22,6 +25,8 @@ public class Game1 : Core
     protected override void Initialize()
     {
         base.Initialize();
+        _estadoCombate = new EstadoCombate();
+
     }
 
     protected override void LoadContent()
@@ -38,8 +43,7 @@ public class Game1 : Core
             Keys.S,
             Keys.A,
             Keys.D,
-            Keys.J,
-            Keys.K
+            Keys.J
             );
 
         _jugador2 = new Jugador(
@@ -51,7 +55,6 @@ public class Game1 : Core
             Keys.Left,
             Keys.Right,
             Keys.Space,
-            Keys.M,
             espejo: true);
 
     }
@@ -64,16 +67,25 @@ public class Game1 : Core
         base.Update(gameTime);
 
         Rectangle screenBounds = new Rectangle(
-            0,
-            0,
-            GraphicsDevice.PresentationParameters.BackBufferWidth,
-            GraphicsDevice.PresentationParameters.BackBufferHeight);
+        0,
+        0,
+        GraphicsDevice.PresentationParameters.BackBufferWidth,
+        GraphicsDevice.PresentationParameters.BackBufferHeight);
+
+        _estadoCombate.Actualizar(gameTime);
 
         // Se actualiza a cada jugador con su rival correspondiente.
         // Esto es lo que permite que el ataque de jugador1 detecte a jugador2
         // y viceversa, sin depender de una única instancia de colisión.
-        _jugador1.Update(gameTime, screenBounds, _jugador2);
-        _jugador2.Update(gameTime, screenBounds, _jugador1);
+        // El estado compartido permite que ambos jugadores sepan si está activa la ventana de bloqueo.
+        _jugador1.Update(gameTime, screenBounds, _jugador2, _estadoCombate);
+        _jugador2.Update(gameTime, screenBounds, _jugador1, _estadoCombate);
+
+        // Se activa al apretar el ataque, incluso aunque el golpe no alcance al rival.
+        if (_jugador1.GolpeIniciado || _jugador2.GolpeIniciado)
+        {
+            _estadoCombate.ActivarGolpe();
+        }
     }
 
     protected override void Draw(GameTime gameTime)
@@ -93,6 +105,8 @@ public class Game1 : Core
         SpriteBatch.End();
         base.Draw(gameTime);
     }
+
+
 
     private void CrearBarrasDeVida()
     {
@@ -127,4 +141,6 @@ public class Game1 : Core
         _pixel.Dispose();
         base.UnloadContent();
     }
+
+
 }

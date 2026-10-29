@@ -6,7 +6,7 @@ namespace MonoGameLibrary.Physics;
 
 public sealed class CollisionBody
 {
-    private readonly Point _size;
+    private Point _size;
 
     public Vector2 Position { get; private set; }
 
@@ -81,4 +81,18 @@ public sealed class CollisionBody
             Math.Clamp(Position.Y, screenBounds.Top, maxY)
         );
     }
+
+    public void SetSize(int width, int height)
+    {
+        _size = new Point(width, height);
+    }
+
+    public void SetHeightFromBottom(int height)
+{
+    float pieY = Position.Y + _size.Y;
+
+    _size = new Point(_size.X, height);
+    Position = new Vector2(Position.X, pieY - height);
+}
+
 }

@@ -15,7 +15,12 @@ public sealed class PersonajeDefinicion
     public string AnimacionIdle { get; }
     public string AnimacionAtaque { get; }
 
-    public string AnimacionLanzar { get; }
+    public string AnimacionBloquear { get; }
+
+    public string AnimacionAgacharse { get; }
+
+
+
 
     public PersonajeDefinicion(
         string nombre,
@@ -24,7 +29,9 @@ public sealed class PersonajeDefinicion
         Habilidad[] habilidades,
         string animacionIdle,
         string animacionAtaque,
-        string animacionLanzar)
+        string animacionBloquear,
+        string animacionAgacharse
+        )
     {
         Nombre = nombre;
         VidaMaxima = vidaMaxima;
@@ -32,7 +39,8 @@ public sealed class PersonajeDefinicion
         Habilidades = habilidades;
         AnimacionIdle = animacionIdle;
         AnimacionAtaque = animacionAtaque;
-        AnimacionLanzar = animacionLanzar;
+        AnimacionBloquear = animacionBloquear;
+        AnimacionAgacharse = animacionAgacharse;
     }
 
     public static PersonajeDefinicion CrearGuerrero(TextureAtlas atlas)
@@ -45,15 +53,7 @@ public sealed class PersonajeDefinicion
                 sprite: atlas.CreateAnimatedSprite("Attack"),
                 altoHitbox: 30,
                 anchoHitbox: 30),
-            
-            new HabilidadProyectil(
-                nombre: "Bola de fuego",
-                danio:20,
-                velocidad: 10.0f,
-                sprite: atlas.CreateAnimatedSprite("Lanzar"),
-                spriteProyectil: atlas.CreateAnimatedSprite("FireBall"),
-                anchoHitbox: 20,
-                altoHitbox: 20)
+
         };
 
 
@@ -71,6 +71,7 @@ public sealed class PersonajeDefinicion
             habilidades: habilidades,
             animacionIdle: "Idle",
             animacionAtaque: "Attack",
-            animacionLanzar: "Lanzar");
+            animacionBloquear: "BloquearYCaminar",
+            animacionAgacharse: "Agacharse");
     }
 }

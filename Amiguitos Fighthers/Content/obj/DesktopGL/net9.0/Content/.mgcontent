@@ -4,10 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/atlas.png</File>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/bufet.png</File>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/PoseIdle.png</File>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/atlas.png</File>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/bufet.png</File>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/PoseIdle.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

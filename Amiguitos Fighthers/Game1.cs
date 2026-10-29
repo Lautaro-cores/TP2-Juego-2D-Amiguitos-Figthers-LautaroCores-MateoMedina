@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -15,6 +16,8 @@ public class Game1 : Core
     private Jugador _jugador2;
     private Texture2D _fondo;
     private Texture2D _pixel;
+    private float _camaraX;
+    private const int AnchoEscenario = 2010;
     private BarraDeVida _barraVidaJugador1;
     private BarraDeVida _barraVidaJugador2;
 
@@ -66,11 +69,10 @@ public class Game1 : Core
 
         base.Update(gameTime);
 
-        Rectangle screenBounds = new Rectangle(
-        0,
-        0,
-        GraphicsDevice.PresentationParameters.BackBufferWidth,
-        GraphicsDevice.PresentationParameters.BackBufferHeight);
+        int anchoPantalla = GraphicsDevice.Viewport.Width;
+        int altoPantalla = GraphicsDevice.Viewport.Height;
+        int anchoEscenario = Math.Max(anchoPantalla, AnchoEscenario);
+        Rectangle limitesCamara = new((int)_camaraX, 0, anchoPantalla, altoPantalla);
 
         _estadoCombate.Actualizar(gameTime);
 
@@ -78,8 +80,14 @@ public class Game1 : Core
         // Esto es lo que permite que el ataque de jugador1 detecte a jugador2
         // y viceversa, sin depender de una única instancia de colisión.
         // El estado compartido permite que ambos jugadores sepan si está activa la ventana de bloqueo.
-        _jugador1.Update(gameTime, screenBounds, _jugador2, _estadoCombate);
-        _jugador2.Update(gameTime, screenBounds, _jugador1, _estadoCombate);
+        _jugador1.Update(gameTime, limitesCamara, _jugador2, _estadoCombate);
+        _jugador2.Update(gameTime, limitesCamara, _jugador1, _estadoCombate);
+
+        float puntoMedio = (_jugador1.Collision.Bounds.Center.X + _jugador2.Collision.Bounds.Center.X) / 2f;
+        _camaraX = Math.Clamp(puntoMedio - anchoPantalla / 2f, 0f, anchoEscenario - anchoPantalla);
+
+        _jugador1.Collision.KeepInside(limitesCamara);
+        _jugador2.Collision.KeepInside(limitesCamara);
 
         // Se activa al apretar el ataque, incluso aunque el golpe no alcance al rival.
         if (_jugador1.GolpeIniciado || _jugador2.GolpeIniciado)
@@ -93,12 +101,19 @@ public class Game1 : Core
         CrearBarrasDeVida();
 
         GraphicsDevice.Clear(Color.CornflowerBlue);
-        SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        int altoPantalla = GraphicsDevice.Viewport.Height;
+         int anchoPantalla = GraphicsDevice.Viewport.Width;
+        int anchoEscenario = Math.Max(anchoPantalla, AnchoEscenario);
+        
+        Matrix transformacionCamara = Matrix.CreateTranslation(-_camaraX, 0f, 0f);
+        SpriteBatch.Begin(samplerState: SamplerState.PointClamp, transformMatrix: transformacionCamara);
 
-        // El fondo se dibuja primero para que jugadores y HUD queden por encima.
-        SpriteBatch.Draw(_fondo, GraphicsDevice.Viewport.Bounds, Color.White);
+        SpriteBatch.Draw(_fondo, new Rectangle(0, 0, anchoEscenario, altoPantalla), Color.White);
         _jugador1.Draw(SpriteBatch);
         _jugador2.Draw(SpriteBatch);
+
+        SpriteBatch.End();
+        SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
         _barraVidaJugador1.Draw(SpriteBatch);
         _barraVidaJugador2.Draw(SpriteBatch);
 

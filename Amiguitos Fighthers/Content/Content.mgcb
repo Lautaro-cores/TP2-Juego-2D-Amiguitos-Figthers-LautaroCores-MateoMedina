@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin ../../../../bufet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../bufet.png;pruebas/bufet.png
+
 #begin atlaspj.xml
 /copy:atlaspj.xml
 
@@ -53,7 +65,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pruebas/bufet.png
+/build:pruebas/bufet.png;pruebas/bufet1.png
 
 #begin pruebas/PoseIdle.png
 /importer:TextureImporter

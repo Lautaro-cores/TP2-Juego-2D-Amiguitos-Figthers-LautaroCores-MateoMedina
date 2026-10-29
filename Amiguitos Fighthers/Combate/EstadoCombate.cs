@@ -4,7 +4,7 @@ namespace Amiguitos_Fighthers;
 
 public sealed class EstadoCombate
 {
-    private const float DuracionGolpe = 5.0f;
+    private const float DuracionGolpe = 1.0f;
     private float _tiempoRestante;
 
     public bool EstaGolpeando =>

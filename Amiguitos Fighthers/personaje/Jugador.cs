@@ -174,7 +174,10 @@ public sealed class Jugador : Personaje
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        Sprite.Draw(spriteBatch, Position);
+        Vector2 posicionDibujo = new(
+            Position.X,
+            Collision.Bounds.Bottom - Sprite.Height);
+        Sprite.Draw(spriteBatch, posicionDibujo);
     }
 
     // Rectángulo frontal que representa la protección creada al retroceder.

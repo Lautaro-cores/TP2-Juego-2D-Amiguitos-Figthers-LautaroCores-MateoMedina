@@ -32,18 +32,6 @@
 /processorParam:TextureFormat=Color
 /build:pruebas/meme-todos-malos-ni-uno-bueno@4x.png;pruebas/portada.png
 
-#begin ../../../../bufet.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../../bufet.png;pruebas/bufet.png
-
 #begin atlaspj.xml
 /copy:atlaspj.xml
 

@@ -18,6 +18,8 @@ public sealed class Jugador : Personaje
     private int _alturaNormalHitbox;
     private int _alturaAgachadoHitbox;
 
+    
+
     // El suelo queda fijo respecto al borde inferior de la pantalla.
     private const int AlturaSuelo = 50;
     private readonly Keys _teclaSalto;
@@ -102,11 +104,11 @@ public sealed class Jugador : Personaje
         spriteAtaque.Stop();
 
         AnimatedSprite spriteBloquear = atlas.CreateAnimatedSprite(definicion.AnimacionBloquear);
-        spriteBloquear.Scale = new Vector2(3.5f,3.5f);
+        spriteBloquear.Scale = new Vector2(3.5f, 3.5f);
         spriteBloquear.Stop();
 
         AnimatedSprite spriteAgacharse = atlas.CreateAnimatedSprite(definicion.AnimacionAgacharse);
-        spriteAgacharse.Scale = new Vector2(3.5f,3.5f);
+        spriteAgacharse.Scale = new Vector2(3.5f, 3.5f);
         spriteAgacharse.Stop();
 
 
@@ -126,7 +128,14 @@ public sealed class Jugador : Personaje
             [EstadoAnimacion.Agachandose] = spriteAgacharse,
         };
 
-        Collision = new CollisionBody(spriteIdle, posicionInicial);
+        int anchoCollider = (int)(spriteIdle.Width * 0.80f);
+        int altoCollider = (int)(spriteIdle.Height * 0.80f);
+
+
+        Collision = new CollisionBody(
+     posicionInicial,
+     anchoCollider,
+     altoCollider);
 
         // Se guarda la altura original y se define el 30% para el estado agachado.
         _alturaNormalHitbox = Collision.Bounds.Height;
@@ -145,7 +154,7 @@ public sealed class Jugador : Personaje
         // ambos jugadores chequearán su ataque contra el otro personaje.
         ProcesarEntrada(otro);
         ActualizarHitboxAgachado();
-        
+
 
 
 
@@ -166,9 +175,9 @@ public sealed class Jugador : Personaje
             _movimientoBasico.Aterrizar();
         }
         _movimientoBasico.IntentarAtacar(Collision.Bounds, otro, otro.Collision.Bounds);
-        
+
         ActualizarEstadoMovimiento();
-        
+
         ActualizarAnimacion(gameTime);
     }
 
@@ -217,6 +226,12 @@ public sealed class Jugador : Personaje
 
     private void ProcesarEntrada(Jugador otro)
     {
+        if (EstaAtacando)
+        {
+            return; // no permite agacharse, bloquearse ni atacar otra vez
+        }
+
+
         if (Core.Input.Keyboard.IsKeyDown(_teclaSalto))
         {
             _movimientoBasico.Saltar();
@@ -269,63 +284,68 @@ public sealed class Jugador : Personaje
             CambiarEstado(EstadoAnimacion.Idle);
         }
 
-       
+
 
     }
 
     private void ActualizarEstadoMovimiento()
-{
-    if (_estadoAnimacion == EstadoAnimacion.Atacando)
     {
-        return;
-    }
+        if (_estadoAnimacion == EstadoAnimacion.Atacando)
+        {
+            return;
+        }
 
-    if (EstaAgachado)
-    {
-        CambiarEstado(EstadoAnimacion.Agachandose);
-        return;
-    }
+        if (EstaAgachado)
+        {
+            CambiarEstado(EstadoAnimacion.Agachandose);
+            return;
+        }
 
-    if (EstaBloqueando)
-    {
-        CambiarEstado(EstadoAnimacion.Bloqueando);
-        return;
-    }
+        if (EstaBloqueando)
+        {
+            CambiarEstado(EstadoAnimacion.Bloqueando);
+            return;
+        }
 
-    CambiarEstado(EstadoAnimacion.Idle);
-}
+        CambiarEstado(EstadoAnimacion.Idle);
+    }
 
     private void CambiarEstado(EstadoAnimacion nuevoEstado)
     {
-        
-    if (_estadoAnimacion == nuevoEstado)
-    {
-        return;
-    }
 
-    _estadoAnimacion = nuevoEstado;
+        if (_estadoAnimacion == nuevoEstado)
+        {
+            return;
+        }
 
-    if (nuevoEstado == EstadoAnimacion.Idle)
-    {
-        _animaciones[nuevoEstado].Play(loop: true);
-    }
-    else if (nuevoEstado == EstadoAnimacion.Bloqueando)
-    {
-        _animaciones[nuevoEstado].Play(loop: true);
-    }
-    else if (nuevoEstado == EstadoAnimacion.Agachandose)
-    {
-        _animaciones[nuevoEstado].Play(loop: true);
-    }
-    else
-    {
-        _animaciones[nuevoEstado].Play(loop: false);
-    }
+        _estadoAnimacion = nuevoEstado;
+
+        if (nuevoEstado == EstadoAnimacion.Idle)
+        {
+            _animaciones[nuevoEstado].Play(loop: true);
+        }
+        else if (nuevoEstado == EstadoAnimacion.Bloqueando)
+        {
+            _animaciones[nuevoEstado].Play(loop: true);
+        }
+        else if (nuevoEstado == EstadoAnimacion.Agachandose)
+        {
+            _animaciones[nuevoEstado].Play(loop: true);
+        }
+        else
+        {
+            _animaciones[nuevoEstado].Play(loop: false);
+        }
     }
 
     private Vector2 ObtenerMovimiento(Jugador otro, EstadoCombate estadoCombate)
     {
         Vector2 movimiento = Vector2.Zero;
+
+        if (EstaAtacando)
+        {
+            return movimiento; // no permite moverse ni bloquear durante el ataque
+        }
 
         if (Core.Input.Keyboard.IsKeyDown(_teclaIzquierda)) movimiento.X -= _movimientoBasico.VelocidadMovimiento;
         if (Core.Input.Keyboard.IsKeyDown(_teclaDerecha)) movimiento.X += _movimientoBasico.VelocidadMovimiento;

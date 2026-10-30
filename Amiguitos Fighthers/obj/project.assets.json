@@ -326,24 +326,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lautaro\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\alumno.ET26\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj",
+      "projectUniqueName": "C:\\Users\\alumno.ET26\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj",
       "projectName": "Amiguitos Fighthers",
-      "projectPath": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj",
-      "packagesPath": "C:\\Users\\lautaro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\obj\\",
+      "projectPath": "C:\\Users\\alumno.ET26\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj",
+      "packagesPath": "C:\\Users\\alumno.ET26\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alumno.ET26\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lautaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\alumno.ET26\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -358,8 +353,8 @@
           "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj": {
-              "projectPath": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj"
+            "C:\\Users\\alumno.ET26\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+              "projectPath": "C:\\Users\\alumno.ET26\\Desktop\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\MonoGameLibrary\\MonoGameLibrary.csproj"
             }
           }
         }
@@ -401,30 +396,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.22, 9.0.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[9.0.22, 9.0.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.22, 9.0.22]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.22, 9.0.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

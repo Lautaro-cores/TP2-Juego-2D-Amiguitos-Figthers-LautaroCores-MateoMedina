@@ -16,15 +16,14 @@ public sealed class EscenaTitulo : Scene
     {
         _portada = Content.Load<Texture2D>("pruebas/portada");
         _fuente = Content.Load<SpriteFont>("SpriteFonts/Default");
-        _pixel = new Texture2D(Core.GraphicsDevice, 1, 1);
-        _pixel.SetData(new[] { Color.White });
+
     }
 
     public override void Update(GameTime gameTime)
     {
         if (Core.Input.Keyboard.WasKeyJustPressed(Keys.Enter))
         {
-            Core.ChangeScene(new EscenaCombate());
+            Core.ChangeScene(new EscenaSeleccionPersonaje());
         }
     }
 

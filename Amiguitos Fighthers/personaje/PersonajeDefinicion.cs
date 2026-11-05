@@ -1,13 +1,27 @@
+using System;
+using System.Collections.Generic;
 using MonoGameLibrary.Graphics;
 
 namespace Amiguitos_Fighthers;
 
-//este archivo define a los personajes y sus habilidades,
-//para que puedan ser instanciados en el juego
-
+public sealed record PersonajeSeleccion(
+    string Nombre,
+    string Imagen,
+    string ImagenNombre);
 
 public sealed class PersonajeDefinicion
 {
+    public static IReadOnlyList<PersonajeSeleccion> Personajes { get; } =
+        Array.AsReadOnly(new[]
+        {
+            new PersonajeSeleccion("Chufo", "PersonajeSeleccion/Chufo", "PersonajeLetras/Chufo"),
+            new PersonajeSeleccion("El Mimo", "PersonajeSeleccion/Elmimo", "PersonajeLetras/Elmimo"),
+            new PersonajeSeleccion("Nacio", "PersonajeSeleccion/Igna", "PersonajeLetras/Nacio"),
+            new PersonajeSeleccion("Rana Magica", "PersonajeSeleccion/RanaMagica", "PersonajeLetras/RanaMagica"),
+            new PersonajeSeleccion("Rumstein", "PersonajeSeleccion/Rumstein", "PersonajeLetras/RumStein"),
+            new PersonajeSeleccion("Tortuliano", "PersonajeSeleccion/Tortuliano", "PersonajeLetras/Tortuliano"),
+        });
+
     public string Nombre { get; }
     public int VidaMaxima { get; }
     public MovimientoBasico MovimientoBasico { get; }
@@ -43,7 +57,7 @@ public sealed class PersonajeDefinicion
         AnimacionAgacharse = animacionAgacharse;
     }
 
-    public static PersonajeDefinicion CrearGuerrero(TextureAtlas atlas)
+    public static PersonajeDefinicion Crear(PersonajeSeleccion personaje, TextureAtlas atlas)
     {
         Habilidad[] habilidades =
         {
@@ -58,7 +72,7 @@ public sealed class PersonajeDefinicion
 
 
         return new PersonajeDefinicion(
-            nombre: "Guerrero",
+            nombre: personaje.Nombre,
             vidaMaxima: 1200,
             // Los parámetros de movimiento básico se configuran individualmente por personaje.
             movimientoBasico: new MovimientoBasico(

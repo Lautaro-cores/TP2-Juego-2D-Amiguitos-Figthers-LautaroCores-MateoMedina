@@ -4,19 +4,57 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/SpriteFonts/Default.spritefont</File>
-    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/meme-todos-malos-ni-uno-bueno@4x.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/Chufo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/ElMimo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/Nacio.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/RanaMagica.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/RumStein.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/Tortuliano.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/Chufo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/Elmimo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/Igna.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/RanaMagica.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/Rumstein.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeSeleccion/Tortuliano.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/Chufo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/Elmimo.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/Nacio.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/RanaMagica.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/RumStein.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/PersonajeLetras/Tortuliano.png</File>
     <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/atlas.png</File>
     <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/AtlasPjEjemplo.png</File>
     <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/bufet.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/meme-todos-malos-ni-uno-bueno@4x.png</File>
     <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/PoseIdle.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/pruebas/selecio.png</File>
+    <File>C:/Users/lautaro/Downloads/git/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/SpriteFonts/Default.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
-    <File>pruebas/portada.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>pruebas/AtlasPj.png</File>
     <File>pruebas/bufet1.png</File>
+    <File>pruebas/portada.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

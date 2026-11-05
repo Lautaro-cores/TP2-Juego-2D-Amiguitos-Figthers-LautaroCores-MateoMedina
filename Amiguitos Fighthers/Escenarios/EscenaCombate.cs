@@ -24,6 +24,17 @@ public sealed class EscenaCombate : Scene
     private BarraDeVida _barraVidaJugador1;
     private BarraDeVida _barraVidaJugador2;
 
+    private readonly PersonajeSeleccion _seleccionJugador1;
+    private readonly PersonajeSeleccion _seleccionJugador2;
+
+    public EscenaCombate(
+        PersonajeSeleccion seleccionJugador1,
+        PersonajeSeleccion seleccionJugador2)
+    {
+        _seleccionJugador1 = seleccionJugador1;
+        _seleccionJugador2 = seleccionJugador2;
+    }
+
     public override void LoadContent()
     {
         _estadoCombate = new EstadoCombate();
@@ -37,7 +48,7 @@ public sealed class EscenaCombate : Scene
             (posicionInicialJugador1 + posicionInicialJugador2) / 2f;
 
         _jugador1 = new Jugador(
-            PersonajeDefinicion.CrearGuerrero(atlaspj),
+            PersonajeDefinicion.Crear(_seleccionJugador1, atlaspj),
             atlaspj,
             new Vector2(posicionInicialJugador1 + desplazamientoInicial, 500.0f),
             Keys.W,
@@ -47,7 +58,7 @@ public sealed class EscenaCombate : Scene
             Keys.J);
 
         _jugador2 = new Jugador(
-            PersonajeDefinicion.CrearGuerrero(atlaspj),
+            PersonajeDefinicion.Crear(_seleccionJugador2, atlaspj),
             atlaspj,
             new Vector2(posicionInicialJugador2 + desplazamientoInicial, 500.0f),
             Keys.Up,
@@ -93,11 +104,7 @@ public sealed class EscenaCombate : Scene
 
         if (_jugador1.Vida <= 0 || _jugador2.Vida <= 0)
         {
-            string resultado = _jugador1.Vida <= 0 && _jugador2.Vida <= 0
-                ? "EMPATE"
-                : _jugador1.Vida <= 0
-                    ? "JUGADOR 2 GANA"
-                    : "JUGADOR 1 GANA";
+            string resultado = _jugador1.Vida <= 0 && _jugador2.Vida <= 0 ? "EMPATE": _jugador1.Vida <= 0? "JUGADOR 2 GANA" : "JUGADOR 1 GANA";
 
             Core.ChangeScene(new EscenaVictoria(resultado));
             return;
@@ -105,11 +112,7 @@ public sealed class EscenaCombate : Scene
 
         if (_tiempoRestante <= 0f)
         {
-            string resultado = _jugador1.Vida == _jugador2.Vida
-                ? "EMPATE"
-                : _jugador1.Vida > _jugador2.Vida
-                    ? "JUGADOR 1 GANA"
-                    : "JUGADOR 2 GANA";
+            string resultado = _jugador1.Vida == _jugador2.Vida? "EMPATE": _jugador1.Vida > _jugador2.Vida ? "JUGADOR 1 GANA": "JUGADOR 2 GANA";
 
             Core.ChangeScene(new EscenaVictoria(resultado));
             return;
@@ -146,19 +149,13 @@ public sealed class EscenaCombate : Scene
         Core.SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
         _barraVidaJugador1.Draw(Core.SpriteBatch);
         _barraVidaJugador2.Draw(Core.SpriteBatch);
-        Core.SpriteBatch.DrawString(_fuente, "JUGADOR 1", new Vector2(32, 68), Color.White);
-        Core.SpriteBatch.DrawString(
-            _fuente,
-            "JUGADOR 2",
-            new Vector2(anchoPantalla - 532, 68),
-            Color.White);
+        Core.SpriteBatch.DrawString(_fuente,$"J1: {_jugador1.Definicion.Nombre}", new Vector2(32, 68),Color.White);
+        string nombreJugador2 = $"J2: {_jugador2.Definicion.Nombre}";
+        Vector2 tamanoNombreJugador2 = _fuente.MeasureString(nombreJugador2);
+        Core.SpriteBatch.DrawString(_fuente, nombreJugador2,new Vector2(anchoPantalla - tamanoNombreJugador2.X - 32, 68),Color.White);
         string textoTiempo = Math.Ceiling(_tiempoRestante).ToString("00");
         Vector2 tamanoTiempo = _fuente.MeasureString(textoTiempo);
-        Core.SpriteBatch.DrawString(
-            _fuente,
-            textoTiempo,
-            new Vector2((anchoPantalla - tamanoTiempo.X) / 2f, 32),
-            Color.White);
+        Core.SpriteBatch.DrawString(_fuente, textoTiempo,new Vector2((anchoPantalla - tamanoTiempo.X) / 2f, 32),Color.White);
         Core.SpriteBatch.End();
     }
 

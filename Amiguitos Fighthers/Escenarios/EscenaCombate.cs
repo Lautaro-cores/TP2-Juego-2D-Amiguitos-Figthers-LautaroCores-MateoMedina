@@ -11,6 +11,7 @@ namespace Amiguitos_Fighthers;
 public sealed class EscenaCombate : Scene
 {
     private const int AnchoEscenario = 2010;
+    private const float DuracionCombate = 99f;
 
     private EstadoCombate _estadoCombate;
     private Jugador _jugador1;
@@ -19,6 +20,7 @@ public sealed class EscenaCombate : Scene
     private Texture2D _pixel;
     private SpriteFont _fuente;
     private float _camaraX;
+    private float _tiempoRestante = DuracionCombate;
     private BarraDeVida _barraVidaJugador1;
     private BarraDeVida _barraVidaJugador2;
 
@@ -85,6 +87,33 @@ public sealed class EscenaCombate : Scene
         _estadoCombate.Actualizar(gameTime);
         _jugador1.Update(gameTime, limitesCamara, _jugador2, _estadoCombate);
         _jugador2.Update(gameTime, limitesCamara, _jugador1, _estadoCombate);
+        _tiempoRestante = Math.Max(
+            0f,
+            _tiempoRestante - (float)gameTime.ElapsedGameTime.TotalSeconds);
+
+        if (_jugador1.Vida <= 0 || _jugador2.Vida <= 0)
+        {
+            string resultado = _jugador1.Vida <= 0 && _jugador2.Vida <= 0
+                ? "EMPATE"
+                : _jugador1.Vida <= 0
+                    ? "JUGADOR 2 GANA"
+                    : "JUGADOR 1 GANA";
+
+            Core.ChangeScene(new EscenaVictoria(resultado));
+            return;
+        }
+
+        if (_tiempoRestante <= 0f)
+        {
+            string resultado = _jugador1.Vida == _jugador2.Vida
+                ? "EMPATE"
+                : _jugador1.Vida > _jugador2.Vida
+                    ? "JUGADOR 1 GANA"
+                    : "JUGADOR 2 GANA";
+
+            Core.ChangeScene(new EscenaVictoria(resultado));
+            return;
+        }
 
         float puntoMedio = (_jugador1.Collision.Bounds.Center.X + _jugador2.Collision.Bounds.Center.X) / 2f;
         _camaraX = Math.Clamp(puntoMedio - anchoPantalla / 2f, 0f, anchoEscenario - anchoPantalla);
@@ -122,6 +151,13 @@ public sealed class EscenaCombate : Scene
             _fuente,
             "JUGADOR 2",
             new Vector2(anchoPantalla - 532, 68),
+            Color.White);
+        string textoTiempo = Math.Ceiling(_tiempoRestante).ToString("00");
+        Vector2 tamanoTiempo = _fuente.MeasureString(textoTiempo);
+        Core.SpriteBatch.DrawString(
+            _fuente,
+            textoTiempo,
+            new Vector2((anchoPantalla - tamanoTiempo.X) / 2f, 32),
             Color.White);
         Core.SpriteBatch.End();
     }

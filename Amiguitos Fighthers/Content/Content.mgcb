@@ -13,14 +13,10 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin SpriteFonts/Default.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Color
-/build:SpriteFonts/Default.spritefont
+#begin atlaspj.xml
+/copy:atlaspj.xml
 
-#begin pruebas/meme-todos-malos-ni-uno-bueno@4x.png
+#begin Personaje/Chufo.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -30,10 +26,67 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pruebas/meme-todos-malos-ni-uno-bueno@4x.png;pruebas/portada.png
+/build:Personaje/Chufo.png
 
-#begin atlaspj.xml
-/copy:atlaspj.xml
+#begin Personaje/ElMimo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Personaje/ElMimo.png
+
+#begin Personaje/Nacio.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Personaje/Nacio.png
+
+#begin Personaje/RanaMagica.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Personaje/RanaMagica.png
+
+#begin Personaje/RumStein.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Personaje/RumStein.png
+
+#begin Personaje/Tortuliano.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Personaje/Tortuliano.png
 
 #begin pruebas/atlas-definition.xml
 /copy:pruebas/atlas-definition.xml
@@ -74,6 +127,18 @@
 /processorParam:TextureFormat=Color
 /build:pruebas/bufet.png;pruebas/bufet1.png
 
+#begin pruebas/meme-todos-malos-ni-uno-bueno@4x.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pruebas/meme-todos-malos-ni-uno-bueno@4x.png;pruebas/portada.png
+
 #begin pruebas/PoseIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -88,4 +153,11 @@
 
 #begin pruebas/PoseIdleAnim.xml
 /copy:pruebas/PoseIdleAnim.xml
+
+#begin SpriteFonts/Default.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Color
+/build:SpriteFonts/Default.spritefont
 

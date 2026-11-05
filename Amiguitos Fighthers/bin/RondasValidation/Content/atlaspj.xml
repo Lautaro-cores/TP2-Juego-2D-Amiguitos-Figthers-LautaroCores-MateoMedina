@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+    <Texture>pruebas/atlasPj</Texture>
+    <Regions>
+        <Region name="Pose1" x="0" y="0" width="64" height="80" />
+    </Regions>
+</TextureAtlas>

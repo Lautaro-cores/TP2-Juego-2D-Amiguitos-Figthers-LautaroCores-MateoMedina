@@ -31,7 +31,9 @@ public sealed class EscenaSeleccionPersonaje : Scene
         {
             PersonajeSeleccion personaje = PersonajeDefinicion.Personajes[i];
             _retratos[i] = Content.Load<Texture2D>(personaje.Imagen);
+            _areasRetrato[i] = ObtenerAreaOpaca(_retratos[i]);
             _nombres[i] = Content.Load<Texture2D>(personaje.ImagenNombre);
+            _areasNombre[i] = ObtenerAreaOpaca(_nombres[i]);
         }
     }
 
@@ -146,6 +148,45 @@ public sealed class EscenaSeleccionPersonaje : Scene
             escalaNombre,
             SpriteEffects.None,
             0f);
+    }
+
+    private static Rectangle ObtenerAreaOpaca(Texture2D textura)
+    {
+        Color[] pixeles = new Color[textura.Width * textura.Height];
+        textura.GetData(pixeles);
+
+        int izquierda = textura.Width;
+        int arriba = textura.Height;
+        int derecha = -1;
+        int abajo = -1;
+
+        for (int y = 0; y < textura.Height; y++)
+        {
+            for (int x = 0; x < textura.Width; x++)
+            {
+                if (pixeles[y * textura.Width + x].A <= 8)
+                {
+                    continue;
+                }
+
+                izquierda = Math.Min(izquierda, x);
+                arriba = Math.Min(arriba, y);
+                derecha = Math.Max(derecha, x);
+                abajo = Math.Max(abajo, y);
+            }
+        }
+
+        if (derecha < izquierda || abajo < arriba)
+        {
+            throw new InvalidOperationException(
+                $"La imagen '{textura.Name}' no contiene pixeles visibles.");
+        }
+
+        return new Rectangle(
+            izquierda,
+            arriba,
+            derecha - izquierda + 1,
+            abajo - arriba + 1);
     }
 
     private static int SiguienteIndice(int indiceActual, int cambio)

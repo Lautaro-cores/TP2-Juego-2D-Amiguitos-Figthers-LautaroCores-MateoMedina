@@ -15,8 +15,12 @@ public sealed class EscenaSeleccionPersonaje : Scene
     private Texture2D[] _nombres;
     private Rectangle[] _areasNombre;
     private SpriteFont _fuente;
+
+    // Chufo comienza seleccionado para el jugador 1.
     private int _indiceJugador1;
-    private int _indiceJugador2 = 1;
+
+    // Rana Magica comienza seleccionada para el jugador 2.
+    private int _indiceJugador2 = 3;
 
     public override void LoadContent()
     {
@@ -30,6 +34,9 @@ public sealed class EscenaSeleccionPersonaje : Scene
         for (int i = 0; i < _retratos.Length; i++)
         {
             PersonajeSeleccion personaje = PersonajeDefinicion.Personajes[i];
+
+            // Las nuevas opciones deben tener tanto el retrato como el nombre de
+            // pantalla cargados para poder recorrerlas desde la seleccion.
             _retratos[i] = Content.Load<Texture2D>(personaje.Imagen);
             _areasRetrato[i] = ObtenerAreaOpaca(_retratos[i]);
             _nombres[i] = Content.Load<Texture2D>(personaje.ImagenNombre);

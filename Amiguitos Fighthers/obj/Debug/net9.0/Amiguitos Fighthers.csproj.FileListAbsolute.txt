@@ -90,11 +90,9 @@ C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCor
 C:\Users\alumno.ET26\Documents\GitHub\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Amiguitos Fighthers.exe
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml
-C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\atlaspj.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas-definition.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlas.xnb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPj.xnb
-C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\AtlasPjEjemplo.xnb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdle.xnb
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\PoseIdleAnim.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\atlaspj.xml
@@ -138,7 +136,6 @@ C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mat
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\Amiguitos Fighthers.genruntimeconfig.cache
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\obj\Debug\net9.0\ref\Amiguitos Fighthers.dll
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb
-C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet1.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\SpriteFonts\Default.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\portada.xnb
@@ -311,3 +308,33 @@ C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mate
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\RumStein.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\Tortuliano.xnb
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\selecio.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\Chufo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\Elmimo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\Nacio.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\RanaMagica.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\RumStein.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeLetras\Tortuliano.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\Chufo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\Elmimo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\Igna.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\RanaMagica.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\Rumstein.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\PersonajeSeleccion\Tortuliano.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\Chufo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\ElMimo.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\Nacio.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\RanaMagica.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\RumStein.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\Personaje\Tortuliano.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\portada.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\selecio.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\SpriteFonts\Default.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\ElMimoAtlas.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\nasioAtlas.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\RumManAtlas.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\tortulianoAtlas.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\Atlas-Elmimo.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\AtlasNasio.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\AtlasRumMan.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\AtlasTortuliano.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb

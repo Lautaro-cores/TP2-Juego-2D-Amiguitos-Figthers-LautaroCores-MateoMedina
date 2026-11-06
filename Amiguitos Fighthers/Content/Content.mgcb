@@ -13,8 +13,95 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin atlaspj.xml
-/copy:atlaspj.xml
+#begin AtlasPersonaje/Atlas-Elmimo.xml
+/copy:AtlasPersonaje/Atlas-Elmimo.xml
+
+#begin AtlasPersonaje/AtlasNasio.xml
+/copy:AtlasPersonaje/AtlasNasio.xml
+
+#begin AtlasPersonaje/AtlasRumMan.xml
+/copy:AtlasPersonaje/AtlasRumMan.xml
+
+#begin AtlasPersonaje/AtlasTortuliano.xml
+/copy:AtlasPersonaje/AtlasTortuliano.xml
+
+#begin AtlasPersonaje/chufoAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/chufoAtlas.png
+
+#begin AtlasPersonaje/ChufoAtlas.xml
+/copy:AtlasPersonaje/ChufoAtlas.xml
+
+#begin AtlasPersonaje/ElMimoAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/ElMimoAtlas.png
+
+#begin AtlasPersonaje/nasioAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/nasioAtlas.png
+
+#begin AtlasPersonaje/ranaMagicaAtlas.xml
+/copy:AtlasPersonaje/ranaMagicaAtlas.xml
+
+#begin AtlasPersonaje/ranamaginaAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/ranamaginaAtlas.png
+
+#begin AtlasPersonaje/RumManAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/RumManAtlas.png
+
+#begin AtlasPersonaje/tortulianoAtlas.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AtlasPersonaje/tortulianoAtlas.png
 
 #begin Personaje/Chufo.png
 /importer:TextureImporter
@@ -88,78 +175,6 @@
 /processorParam:TextureFormat=Color
 /build:Personaje/Tortuliano.png
 
-#begin PersonajeSeleccion/Chufo.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/Chufo.png
-
-#begin PersonajeSeleccion/Elmimo.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/Elmimo.png
-
-#begin PersonajeSeleccion/Igna.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/Igna.png
-
-#begin PersonajeSeleccion/RanaMagica.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/RanaMagica.png
-
-#begin PersonajeSeleccion/Rumstein.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/Rumstein.png
-
-#begin PersonajeSeleccion/Tortuliano.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:PersonajeSeleccion/Tortuliano.png
-
 #begin PersonajeLetras/Chufo.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -232,6 +247,78 @@
 /processorParam:TextureFormat=Color
 /build:PersonajeLetras/Tortuliano.png
 
+#begin PersonajeSeleccion/Chufo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/Chufo.png
+
+#begin PersonajeSeleccion/Elmimo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/Elmimo.png
+
+#begin PersonajeSeleccion/Igna.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/Igna.png
+
+#begin PersonajeSeleccion/RanaMagica.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/RanaMagica.png
+
+#begin PersonajeSeleccion/Rumstein.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/Rumstein.png
+
+#begin PersonajeSeleccion/Tortuliano.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PersonajeSeleccion/Tortuliano.png
+
 #begin pruebas/atlas-definition.xml
 /copy:pruebas/atlas-definition.xml
 
@@ -246,6 +333,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:pruebas/atlas.png
+
+#begin pruebas/atlaspj.xml
+/copy:pruebas/atlaspj.xml
 
 #begin pruebas/AtlasPjEjemplo.png
 /importer:TextureImporter
@@ -269,7 +359,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pruebas/bufet.png;pruebas/bufet1.png
+/build:pruebas/bufet.png
 
 #begin pruebas/meme-todos-malos-ni-uno-bueno@4x.png
 /importer:TextureImporter
@@ -316,3 +406,4 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Color
 /build:SpriteFonts/Default.spritefont
+

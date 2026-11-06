@@ -38,7 +38,15 @@ public sealed class EscenaCombate : Scene
     public override void LoadContent()
     {
         _estadoCombate = new EstadoCombate();
-        TextureAtlas atlaspj = TextureAtlas.FromFile(Content, "pruebas/atlaspj.xml");
+
+        // La seleccion contiene AtlasContenido. Cada jugador carga su propio atlas
+        // para poder tener animaciones diferentes aunque ambos usen Jugador.
+        TextureAtlas atlasJugador1 = TextureAtlas.FromFile(
+            Content,
+            _seleccionJugador1.AtlasContenido);
+        TextureAtlas atlasJugador2 = TextureAtlas.FromFile(
+            Content,
+            _seleccionJugador2.AtlasContenido);
         _fondo = Content.Load<Texture2D>("pruebas/bufet");
         _fuente = Content.Load<SpriteFont>("SpriteFonts/Default");
 
@@ -48,24 +56,39 @@ public sealed class EscenaCombate : Scene
             (posicionInicialJugador1 + posicionInicialJugador2) / 2f;
 
         _jugador1 = new Jugador(
-            PersonajeDefinicion.Crear(_seleccionJugador1, atlaspj),
-            atlaspj,
+            PersonajeDefinicion.Crear(_seleccionJugador1, atlasJugador1),
+            atlasJugador1,
             new Vector2(posicionInicialJugador1 + desplazamientoInicial, 500.0f),
+            // Movimiento del jugador 1.
             Keys.W,
             Keys.S,
             Keys.A,
             Keys.D,
-            Keys.J);
+            // Ataques del jugador 1: golpes Y/U/I y patadas H/J/K.
+            Keys.Y,
+            Keys.U,
+            Keys.I,
+            Keys.H,
+            Keys.J,
+            Keys.K);
 
         _jugador2 = new Jugador(
-            PersonajeDefinicion.Crear(_seleccionJugador2, atlaspj),
-            atlaspj,
+            PersonajeDefinicion.Crear(_seleccionJugador2, atlasJugador2),
+            atlasJugador2,
             new Vector2(posicionInicialJugador2 + desplazamientoInicial, 500.0f),
+            // Movimiento del jugador 2.
             Keys.Up,
             Keys.Down,
             Keys.Left,
             Keys.Right,
-            Keys.Space,
+            // Ataques del jugador 2, en el mismo orden que el jugador 1:
+            // golpes O/P/' y patadas L/Ñ/{.
+            Keys.O,
+            Keys.P,
+            Keys.OemQuotes,
+            Keys.L,
+            Keys.OemSemicolon,
+            Keys.OemOpenBrackets,
             espejo: true);
 
         _pixel = new Texture2D(Core.GraphicsDevice, 1, 1);

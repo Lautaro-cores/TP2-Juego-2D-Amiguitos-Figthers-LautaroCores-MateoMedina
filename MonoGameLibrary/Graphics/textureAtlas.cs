@@ -28,6 +28,7 @@ public TextureAtlas()
     _animations = new Dictionary<string, Animation>();
 }
 
+
 /// <summary>
 /// Creates a new texture atlas instance using the given texture.
 /// </summary>
@@ -252,5 +253,4 @@ public static TextureAtlas FromFile(ContentManager content, string fileName)
         }
     }
 }
-
 }

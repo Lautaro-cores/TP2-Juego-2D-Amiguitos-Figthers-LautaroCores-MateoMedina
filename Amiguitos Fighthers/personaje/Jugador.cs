@@ -153,7 +153,10 @@ public sealed class Jugador : Personaje
         spriteIdle.Scale = new Vector2(3.5f, 3.5f);
         spriteIdle.Play(loop: true);
 
-        AnimatedSprite spriteCaminar = atlas.CreateAnimatedSprite(definicion.AnimacionAtaque);
+        // La animación de caminar debe cargarse de su nombre propio. Antes se
+        // reutilizaba accidentalmente el campo de ataque, por lo que caminando
+        // podía mostrar otra animación, verse cortado o cambiar su geometría.
+        AnimatedSprite spriteCaminar = atlas.CreateAnimatedSprite("caminar");
         spriteCaminar.Scale = new Vector2(3.5f, 3.5f);
         spriteCaminar.Stop();
 

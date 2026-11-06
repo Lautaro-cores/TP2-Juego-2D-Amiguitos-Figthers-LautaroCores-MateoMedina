@@ -338,3 +338,7 @@ C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-Mat
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\AtlasRumMan.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\AtlasTortuliano.xml
 C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\pruebas\bufet.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\ChufoAtlas.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\chufoAtlas.xnb
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\ranaMagicaAtlas.xml
+C:\Users\Mateo\OneDrive\Desktop\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\Amiguitos Fighthers\bin\Debug\net9.0\Content\AtlasPersonaje\ranamaginaAtlas.xnb

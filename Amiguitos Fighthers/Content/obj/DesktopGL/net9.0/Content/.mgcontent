@@ -4,8 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/chufoAtlas.png</File>
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/ElMimoAtlas.png</File>
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/nasioAtlas.png</File>
+    <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/ranamaginaAtlas.png</File>
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/RumManAtlas.png</File>
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/AtlasPersonaje/tortulianoAtlas.png</File>
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/Personaje/Chufo.png</File>
@@ -35,6 +37,8 @@
     <File>C:/Users/Mateo/OneDrive/Desktop/TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina/Amiguitos Fighthers/Content/SpriteFonts/Default.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

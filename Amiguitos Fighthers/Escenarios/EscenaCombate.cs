@@ -81,14 +81,14 @@ public sealed class EscenaCombate : Scene
             Keys.Down,
             Keys.Left,
             Keys.Right,
-            // Ataques del jugador 2, en el mismo orden que el jugador 1:
-            // golpes O/P/' y patadas L/Ñ/{.
-            Keys.O,
-            Keys.P,
-            Keys.OemQuotes,
-            Keys.L,
-            Keys.OemSemicolon,
-            Keys.OemOpenBrackets,
+            // Ataques del jugador 2: Insert/Inicio/RePag para golpes
+            // y Suprimir/Fin/AvPag para patadas.
+            Keys.Insert,
+            Keys.Home,
+            Keys.PageUp,
+            Keys.Delete,
+            Keys.End,
+            Keys.PageDown,
             espejo: true);
 
         _pixel = new Texture2D(Core.GraphicsDevice, 1, 1);

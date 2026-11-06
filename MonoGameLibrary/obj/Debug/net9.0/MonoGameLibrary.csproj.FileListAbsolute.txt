@@ -72,3 +72,6 @@ C:\Users\lautaro\AppData\Local\Temp\AmiguitosFighthers-build\Debug\net9.0\MonoGa
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\VictoriaValidation\MonoGameLibrary.deps.json
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\VictoriaValidation\MonoGameLibrary.dll
 C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\VictoriaValidation\MonoGameLibrary.pdb
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\CombatRefactorValidation\MonoGameLibrary.deps.json
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\CombatRefactorValidation\MonoGameLibrary.dll
+C:\Users\lautaro\Downloads\git\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\MonoGameLibrary\bin\CombatRefactorValidation\MonoGameLibrary.pdb

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SXCMtAYWpIQ=",
+  "dgSpecHash": "3zAjAGVR8vY=",
   "success": true,
   "projectFilePath": "C:\\Users\\lautaro\\Downloads\\git\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\TP2-Juego-2D-Amiguitos-Figthers-LautaroCores-MateoMedina\\Amiguitos Fighthers\\Amiguitos Fighthers.csproj",
   "expectedPackageFiles": [
@@ -21,8 +21,11 @@
     "C:\\Users\\lautaro\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\lautaro\\.nuget\\packages\\textcopy\\6.2.1\\textcopy.6.2.1.nupkg.sha512",
     "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.22\\microsoft.netcore.app.ref.9.0.22.nupkg.sha512",
+    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.22\\microsoft.netcore.app.runtime.win-x64.9.0.22.nupkg.sha512",
     "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.22\\microsoft.windowsdesktop.app.ref.9.0.22.nupkg.sha512",
+    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.22.nupkg.sha512",
     "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.22\\microsoft.aspnetcore.app.ref.9.0.22.nupkg.sha512",
+    "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.22\\microsoft.aspnetcore.app.runtime.win-x64.9.0.22.nupkg.sha512",
     "C:\\Users\\lautaro\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.22\\microsoft.netcore.app.host.win-x64.9.0.22.nupkg.sha512"
   ],
   "logs": []

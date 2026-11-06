@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+    <Texture>AtlasPersonaje/tortulianoAtlas</Texture>
+    <Regions>
+        <Region name="idle1" x="19" y="10" width="51" height="75" />
+        <Region name="idle2" x="74" y="8" width="51" height="77" />
+        <Region name="caminar1" x="159" y="10" width="51" height="75" />
+        <Region name="caminar2" x="219" y="10" width="55" height="75" />
+        <Region name="caminar3" x="281" y="10" width="55" height="75" />
+        <Region name="cubrirse1" x="394" y="15" width="45" height="71" />
+        <Region name="cubrirse2" x="443" y="15" width="57" height="70" />
+        <Region name="cubrirse3" x="506" y="14" width="55" height="71" />
+        <Region name="cubrirse4" x="564" y="14" width="55" height="71" />
+        <Region name="idleAgachado1" x="14" y="94" width="43" height="51" />
+        <Region name="idleAgachado2" x="61" y="94" width="43" height="51" />
+        <Region name="pegarAgachado1" x="122" y="95" width="55" height="50" />
+        <Region name="pegarAgachado2" x="182" y="94" width="65" height="51" />
+        <Region name="patearAgachado1" x="259" y="96" width="51" height="49" />
+        <Region name="patearAgachado2" x="315" y="97" width="64" height="49" />
+        <Region name="salto" x="10" y="158" width="55" height="63" />
+        <Region name="aire" x="84" y="161" width="52" height="64" />
+        <Region name="patearEnAire" x="181" y="158" width="71" height="62" />
+        <Region name="pegarEnAire" x="261" y="161" width="71" height="63" />
+        <Region name="puñoLigero1" x="15" y="232" width="43" height="74" />
+        <Region name="puñoLigero2" x="71" y="232" width="56" height="74" />
+        <Region name="patadaLigera1" x="229" y="231" width="66" height="75" />
+        <Region name="paradaLigera2" x="311" y="230" width="63" height="76" />
+        <Region name="puñoMedio1" x="16" y="313" width="43" height="74" />
+        <Region name="puñoMedio2" x="73" y="312" width="54" height="75" />
+        <Region name="patadaMedia1" x="229" y="313" width="56" height="75" />
+        <Region name="patadaMedia2" x="297" y="315" width="73" height="73" />
+        <Region name="puñoPesado1" x="6" y="398" width="48" height="75" />
+        <Region name="puñoPesado2" x="73" y="396" width="41" height="77" />
+        <Region name="puñoPesado3" x="127" y="399" width="72" height="73" />
+        <Region name="paradaPesada1" x="226" y="399" width="65" height="73" />
+        <Region name="paradaPesada2" x="292" y="398" width="87" height="74" />
+    </Regions>
+  <Animations>
+    <Animation name="salto" delay="200">
+      <Frame region="salto" />
+    </Animation>
+    <Animation name="idle" delay="200">
+      <Frame region="idle1" />
+      <Frame region="idle2" />
+    </Animation>
+    <Animation name="caminar" delay="200">
+      <Frame region="caminar1" />
+      <Frame region="caminar2" />
+      <Frame region="caminar3" />
+    </Animation>
+    <Animation name="bloquear" delay="200">
+      <Frame region="cubrirse1" />
+      <Frame region="cubrirse2" />
+      <Frame region="cubrirse3" />
+      <Frame region="cubrirse4" />
+    </Animation>
+    <Animation name="agacharse" delay="200">
+      <Frame region="idleAgachado1" />
+      <Frame region="idleAgachado2" />
+    </Animation>
+    <Animation name="golpeAgachado" delay="200">
+      <Frame region="pegarAgachado1" />
+      <Frame region="pegarAgachado2" />
+    </Animation>
+    <Animation name="patadaAgachado" delay="200">
+      <Frame region="patearAgachado1" />
+      <Frame region="patearAgachado2" />
+    </Animation>
+    <Animation name="puñoLigero" delay="200">
+      <Frame region="puñoLigero1" />
+      <Frame region="puñoLigero2" />
+    </Animation>
+    <Animation name="patadaLigera" delay="200">
+      <Frame region="paradaLigera2" />
+      <Frame region="patadaLigera1" />
+    </Animation>
+    <Animation name="puñoMedio" delay="200">
+      <Frame region="puñoMedio1" />
+      <Frame region="puñoMedio2" />
+    </Animation>
+    <Animation name="patadaMedia" delay="200">
+      <Frame region="patadaMedia1" />
+      <Frame region="patadaMedia2" />
+    </Animation>
+    <Animation name="puñoPesado" delay="200">
+      <Frame region="puñoPesado1" />
+      <Frame region="puñoPesado2" />
+      <Frame region="puñoPesado3" />
+    </Animation>
+    <Animation name="patadaPesada" delay="200">
+      <Frame region="paradaPesada1" />
+      <Frame region="paradaPesada2" />
+    </Animation>
+    <Animation name="aire" delay="200">
+      <Frame region="aire" />
+    </Animation>
+    <Animation name="patadaAire" delay="200">
+      <Frame region="patearEnAire" />
+    </Animation>
+    <Animation name="puñoAire" delay="200">
+      <Frame region="pegarEnAire" />
+    </Animation>
+    
+  </Animations>
+</TextureAtlas>
+ 

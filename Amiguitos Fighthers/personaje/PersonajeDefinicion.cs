@@ -8,6 +8,7 @@ public sealed record PersonajeSeleccion(
     string Nombre,
     string Imagen,
     string ImagenNombre,
+    string ImagenTarjeta,
     string AtlasContenido,
     int Indice);
 
@@ -20,12 +21,12 @@ public sealed class PersonajeDefinicion
     public static IReadOnlyList<PersonajeSeleccion> Personajes { get; } =
         Array.AsReadOnly(new[]
         {
-            new PersonajeSeleccion("Chufo", "PersonajeSeleccion/Chufo", "PersonajeLetras/Chufo", "AtlasPersonaje/ChufoAtlas.xml", 0),
-            new PersonajeSeleccion("El Mimo", "PersonajeSeleccion/Elmimo", "PersonajeLetras/Elmimo", "AtlasPersonaje/Atlas-Elmimo.xml", 1),
-            new PersonajeSeleccion("Nacio", "PersonajeSeleccion/Igna", "PersonajeLetras/Nacio", "AtlasPersonaje/AtlasNasio.xml", 2),
-            new PersonajeSeleccion("Rana Magica", "PersonajeSeleccion/RanaMagica", "PersonajeLetras/RanaMagica", "AtlasPersonaje/ranaMagicaAtlas.xml", 3),
-            new PersonajeSeleccion("Rumstein", "PersonajeSeleccion/RumStein", "PersonajeLetras/RumStein", "AtlasPersonaje/AtlasRumMan.xml", 4),
-            new PersonajeSeleccion("Tortuliano", "PersonajeSeleccion/Tortuliano", "PersonajeLetras/Tortuliano", "AtlasPersonaje/AtlasTortuliano.xml", 5),
+            new PersonajeSeleccion("Chufo", "PersonajeSeleccion/Chufo", "PersonajeLetras/Chufo", "PersonajeTarjetas/Chufo", "AtlasPersonaje/ChufoAtlas.xml", 0),
+            new PersonajeSeleccion("El Mimo", "PersonajeSeleccion/Elmimo", "PersonajeLetras/Elmimo", "PersonajeTarjetas/Elmimo", "AtlasPersonaje/Atlas-Elmimo.xml", 1),
+            new PersonajeSeleccion("Nacio", "PersonajeSeleccion/Igna", "PersonajeLetras/Nacio", "PersonajeTarjetas/Nacio", "AtlasPersonaje/AtlasNasio.xml", 2),
+            new PersonajeSeleccion("Rana Magica", "PersonajeSeleccion/RanaMagica", "PersonajeLetras/RanaMagica", "PersonajeTarjetas/RanaMagica", "AtlasPersonaje/ranaMagicaAtlas.xml", 3),
+            new PersonajeSeleccion("Rumstein", "PersonajeSeleccion/RumStein", "PersonajeLetras/RumStein", "PersonajeTarjetas/Rumstein", "AtlasPersonaje/AtlasRumMan.xml", 4),
+            new PersonajeSeleccion("Tortuliano", "PersonajeSeleccion/Tortuliano", "PersonajeLetras/Tortuliano", "PersonajeTarjetas/tortuliano", "AtlasPersonaje/AtlasTortuliano.xml", 5),
         });
 
     public string Nombre { get; }

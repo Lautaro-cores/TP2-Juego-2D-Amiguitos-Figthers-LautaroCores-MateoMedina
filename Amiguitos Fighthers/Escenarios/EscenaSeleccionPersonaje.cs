@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -10,10 +9,7 @@ namespace Amiguitos_Fighthers;
 public sealed class EscenaSeleccionPersonaje : Scene
 {
     private Texture2D _fondo;
-    private Texture2D[] _retratos;
-    private Rectangle[] _areasRetrato;
-    private Texture2D[] _nombres;
-    private Rectangle[] _areasNombre;
+    private Texture2D[] _tarjetas;
     private SpriteFont _fuente;
 
     // Chufo comienza seleccionado para el jugador 1.
@@ -24,23 +20,14 @@ public sealed class EscenaSeleccionPersonaje : Scene
 
     public override void LoadContent()
     {
-        _fondo = Content.Load<Texture2D>("pruebas/selecio");
+        _fondo = Content.Load<Texture2D>("PersonajeTarjetas/fondo_2x");
         _fuente = Content.Load<SpriteFont>("SpriteFonts/Default");
-        _retratos = new Texture2D[PersonajeDefinicion.Personajes.Count];
-        _areasRetrato = new Rectangle[_retratos.Length];
-        _nombres = new Texture2D[_retratos.Length];
-        _areasNombre = new Rectangle[_retratos.Length];
+        _tarjetas = new Texture2D[PersonajeDefinicion.Personajes.Count];
 
-        for (int i = 0; i < _retratos.Length; i++)
+        for (int i = 0; i < _tarjetas.Length; i++)
         {
             PersonajeSeleccion personaje = PersonajeDefinicion.Personajes[i];
-
-            // Las nuevas opciones deben tener tanto el retrato como el nombre de
-            // pantalla cargados para poder recorrerlas desde la seleccion.
-            _retratos[i] = Content.Load<Texture2D>(personaje.Imagen);
-            _areasRetrato[i] = ObtenerAreaOpaca(_retratos[i]);
-            _nombres[i] = Content.Load<Texture2D>(personaje.ImagenNombre);
-            _areasNombre[i] = ObtenerAreaOpaca(_nombres[i]);
+            _tarjetas[i] = Content.Load<Texture2D>(personaje.ImagenTarjeta);
         }
     }
 
@@ -104,96 +91,25 @@ public sealed class EscenaSeleccionPersonaje : Scene
 
     private void DrawJugador(int indice, int jugador, int anchoPantalla, int altoPantalla)
     {
-        Texture2D retrato = _retratos[indice];
-        Rectangle areaRetrato = _areasRetrato[indice];
-        float rotacion = jugador == 0
-            ? MathHelper.ToRadians(-15f)
-            : MathHelper.ToRadians(15f);
-        float seno = MathF.Abs(MathF.Sin(rotacion));
-        float coseno = MathF.Abs(MathF.Cos(rotacion));
-        float anchoRotado = areaRetrato.Width * coseno + areaRetrato.Height * seno;
-        float altoRotado = areaRetrato.Width * seno + areaRetrato.Height * coseno;
+        Texture2D tarjeta = _tarjetas[indice];
+        float rotacion = MathHelper.ToRadians(jugador == 0 ? -15f : 15f);
         float escala = MathHelper.Min(
-            anchoPantalla * 0.89f / anchoRotado,
-            altoPantalla * 0.70f / altoRotado);
-        Vector2 centroRetrato = new(
-            anchoPantalla * (jugador == 0 ? 0.18f : 0.82f),
-            altoPantalla * 0.42f);
-        Vector2 origenRetrato = new(
-            areaRetrato.Width / 2f,
-            areaRetrato.Height / 2f);
+            anchoPantalla * 0.5f / tarjeta.Width,
+            altoPantalla * 1f / tarjeta.Height);
+        Vector2 centroTarjeta = new(
+            anchoPantalla * (jugador == 0 ? 0.21f : 0.79f),
+            altoPantalla * 0.50f);
 
         Core.SpriteBatch.Draw(
-            retrato,
-            centroRetrato,
-            areaRetrato,
+            tarjeta,
+            centroTarjeta,
+            null,
             Color.White,
             rotacion,
-            origenRetrato,
+            new Vector2(tarjeta.Width / 2f, tarjeta.Height / 2f),
             escala,
             SpriteEffects.None,
             0f);
-
-        Texture2D nombre = _nombres[indice];
-        Rectangle areaNombre = _areasNombre[indice];
-        float anchoNombreRotado = areaNombre.Width * coseno + areaNombre.Height * seno;
-        float altoNombreRotado = areaNombre.Width * seno + areaNombre.Height * coseno;
-        float escalaNombre = MathHelper.Min(
-            anchoPantalla * 0.29f / anchoNombreRotado,
-            altoPantalla * 0.16f / altoNombreRotado);
-        Vector2 centroNombre = new(
-            anchoPantalla * (jugador == 0 ? 0.235f : 0.765f),
-            altoPantalla * 0.79f);
-
-        Core.SpriteBatch.Draw(
-            nombre,
-            centroNombre,
-            areaNombre,
-            Color.White,
-            rotacion,
-            new Vector2(areaNombre.Width / 2f, areaNombre.Height / 2f),
-            escalaNombre,
-            SpriteEffects.None,
-            0f);
-    }
-
-    private static Rectangle ObtenerAreaOpaca(Texture2D textura)
-    {
-        Color[] pixeles = new Color[textura.Width * textura.Height];
-        textura.GetData(pixeles);
-
-        int izquierda = textura.Width;
-        int arriba = textura.Height;
-        int derecha = -1;
-        int abajo = -1;
-
-        for (int y = 0; y < textura.Height; y++)
-        {
-            for (int x = 0; x < textura.Width; x++)
-            {
-                if (pixeles[y * textura.Width + x].A <= 8)
-                {
-                    continue;
-                }
-
-                izquierda = Math.Min(izquierda, x);
-                arriba = Math.Min(arriba, y);
-                derecha = Math.Max(derecha, x);
-                abajo = Math.Max(abajo, y);
-            }
-        }
-
-        if (derecha < izquierda || abajo < arriba)
-        {
-            throw new InvalidOperationException(
-                $"La imagen '{textura.Name}' no contiene pixeles visibles.");
-        }
-
-        return new Rectangle(
-            izquierda,
-            arriba,
-            derecha - izquierda + 1,
-            abajo - arriba + 1);
     }
 
     private static int SiguienteIndice(int indiceActual, int cambio)

@@ -127,17 +127,27 @@ public sealed class EscenaCombate : Scene
 
         if (_jugador1.Vida <= 0 || _jugador2.Vida <= 0)
         {
-            string resultado = _jugador1.Vida <= 0 && _jugador2.Vida <= 0 ? "EMPATE": _jugador1.Vida <= 0? "JUGADOR 2 GANA" : "JUGADOR 1 GANA";
-
-            Core.ChangeScene(new EscenaVictoria(resultado));
+            if (_jugador1.Vida <= 0 && _jugador2.Vida <= 0)
+            {
+                Core.ChangeScene(new EscenaVictoria("EMPATE"));
+            }
+            else
+            {
+                MostrarVictoria(_jugador1.Vida > 0);
+            }
             return;
         }
 
         if (_tiempoRestante <= 0f)
         {
-            string resultado = _jugador1.Vida == _jugador2.Vida? "EMPATE": _jugador1.Vida > _jugador2.Vida ? "JUGADOR 1 GANA": "JUGADOR 2 GANA";
-
-            Core.ChangeScene(new EscenaVictoria(resultado));
+            if (_jugador1.Vida == _jugador2.Vida)
+            {
+                Core.ChangeScene(new EscenaVictoria("EMPATE"));
+            }
+            else
+            {
+                MostrarVictoria(_jugador1.Vida > _jugador2.Vida);
+            }
             return;
         }
 
@@ -152,6 +162,18 @@ public sealed class EscenaCombate : Scene
         {
             _estadoCombate.ActivarGolpe();
         }
+    }
+
+    private void MostrarVictoria(bool ganoJugador1)
+    {
+        PersonajeSeleccion ganador = ganoJugador1
+            ? _seleccionJugador1
+            : _seleccionJugador2;
+        PersonajeSeleccion perdedor = ganoJugador1
+            ? _seleccionJugador2
+            : _seleccionJugador1;
+
+        Core.ChangeScene(new EscenaVictoria(ganador, perdedor));
     }
 
     public override void Draw(GameTime gameTime)
